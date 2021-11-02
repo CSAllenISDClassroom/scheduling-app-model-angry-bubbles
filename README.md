@@ -7,8 +7,9 @@ Ricky -
   QA Engineer
 Garrett - 
   Development Engineer (Back End)
-Hersh -  
+Hersh -
   Product Manager - The product manager is the risk manager. They manage how many features will be available in product, what is possible in the given constraints, and balance risks.
+  Manage the tasks and features of the product. Keeping track of who is doing what and by what date. Keeping the project a reasonable size.
   QA Engineer
 Caleb - 
   Project Manager - The project manager may use a method of organization such as a spreadsheet to keep track of feature status, keep track of resources, organization of project.
