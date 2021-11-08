@@ -102,3 +102,11 @@ The model schedule is an empty schedule on the screen that has empty slots for e
 ## Design \
 
 ## QA \
+
+# 2. Filter for Courses\
+
+## Functionality \
+
+## Design \
+
+## QA \
