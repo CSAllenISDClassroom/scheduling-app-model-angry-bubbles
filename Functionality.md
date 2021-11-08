@@ -9,7 +9,7 @@
 # 2. Model Schedule \
 
 ## Functionality \
-The model schedule is an empty schedule on the screen that has empty slots for each period.
+The model schedule is an empty schedule on the screen that has empty slots for each period. The term "Model Schedule" refers to the user interface displayed on the screen. The user interface for this should look like the interface for the empty schedule in the scheduler app last year (2020-2021). Courses can be dragged into and out of the slots on the model schedule. It will have spots for each period (0-8), but the 0, 1, and 8 period spots will be there for both A days and B days. Furthermore, there will be a a second interface for the second semester, to account for semester long classes.
 
 ## Design \
 
@@ -74,7 +74,7 @@ The model schedule is an empty schedule on the screen that has empty slots for e
 # 2. Bug Report \
 
 ## Functionality \
-
+The bug report func
 ## Design \
 
 ## QA \
