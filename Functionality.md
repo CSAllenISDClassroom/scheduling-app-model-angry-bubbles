@@ -70,3 +70,34 @@
 
 ## QA \
 
+# Bug Report \
+
+## Functionality \
+
+## Design \
+
+## QA \
+
+# Link to Resources \
+
+## Functionality \
+
+## Design \
+
+## QA \
+
+# Notification for special classes (band, soccer, etc.) \
+
+## Functionality \
+
+## Design \
+
+## QA \
+
+# Information pop up for each class \
+
+## Functionality \
+
+## Design \
+
+## QA \
