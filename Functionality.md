@@ -58,7 +58,18 @@ user testing plan
 
 # 3. Warning upon creation of invalid schedule \
 
-## Functionality \
+## Functionality \ 
+When the user is creating their schedule by placing their classes in different class periods into the model 
+scheduler, if a class is placed where there is a conflict there will be red text at the top of the screen that
+notifies the user that there is a conflict in the schedule, and the user will not be able to place courses in their schedule
+until the conflict is resolved.\
+ some conflicts include but are not limitted to: \
+ invalid privellage period 
+ not enough courses/minutes 
+ overlapping classes 
+ campus conflicts 
+ 
+
 
 
 ## Design \
