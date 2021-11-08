@@ -116,7 +116,15 @@ The bug report function: There's a button that users can click on to report a bu
 # 2. Filter for Courses\
 
 ## Functionality \
-
+Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design \
+
+## QA \
+
+# Navbar \
+
+## Functionality \
+
+## Design \ 
 
 ## QA \
