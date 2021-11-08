@@ -9,6 +9,7 @@
 # 2. Model Schedule \
 
 ## Functionality \
+The model schedule is an empty schedule on the screen that has empty slots for each period.
 
 ## Design \
 
