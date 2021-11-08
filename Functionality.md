@@ -1,126 +1,122 @@
-# 1. List of Courses \
+# 1. List of Courses
 
-## Functionality \
-Every possible course will be listed initially, but a search engine will be available to make accessibility of courses more easier by the user. The search engine will receive user input and compare it with the list of courses to filter by keyword.
+## Functionality
+Every possible course will be listed initially, but a search engine will be available to make accessibility of courses more easier by the user. The search engine will receive user input and compare it with the list of courses to filter by keyword. Furthermore, the search engine will also be assisted by filters to further narrow down the list of courses to ones that the user desires. Possible filters to narrow down selections include subject, period, location, GPA, prerequisites, and grade requirements.
+## Design
 
-Furthermore, the search engine will also be assisted by filters to further narrow down the list of courses to ones that the user desires. Possible filters to narrow 
+## QA
 
-Once the user finds their desired course, they can add it to their model schedule to proceed to the next step of organising a schedule.
-## Design \
+# 2. Model Schedule
 
-## QA \
-
-# 2. Model Schedule \
-
-## Functionality \
+## Functionality
 The model schedule is an empty schedule on the screen that has empty slots for each period. The term "Model Schedule" refers to the user interface displayed on the screen. The user interface for this should look like the interface for the empty schedule in the scheduler app last year (2020-2021). Courses can be dragged into and out of the slots on the model schedule. It will have spots for each period (0-8), but the 0, 1, and 8 period spots will be there for both A days and B days. Furthermore, there will be a a second interface for the second semester, to account for semester long classes.
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 3. Inputting Courses into Schedule \
+# 3. Inputting Courses into Schedule
 
-## Functionality \ 
+## Functionality 
 what it is 
 provides the list of courses from the database and allows user to click on them to select them.
 Has a search bar to search for key words. The key words are used to sort through the list of all the classes. 
 stores the selected courses in the user's list of selected courses. The user can use the list of selected courses to 
 put them in the model schedule.
 
-## Design \ 
+## Design 
 how it works 
 There is a list of available classes from a database 
 
-## QA \ 
+## QA 
 vefifying that it works properly 
 user testing plan 
 
-# 4. Print/Email Schedule \
+# 4. Print/Email Schedule
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 1. Help Ticket Button \
+# 1. Help Ticket Button
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 2. Separation between A and B day, Spring and Fall \
+# 2. Separation between A and B day, Spring and Fall
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 3. Warning upon creation of invalid schedule \
+# 3. Warning upon creation of invalid schedule
 
-## Functionality \
+## Functionality
 
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 4. Shows classes available once period is highlighted \
+# 4. Shows classes available once period is highlighted
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 1. Shows periods available once class is highlighted \
+# 1. Shows periods available once class is highlighted
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 2. Bug Report \
+# 2. Bug Report
 
-## Functionality \
+## Functionality
 The bug report func
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 3. Link to Resources \
+# 3. Link to Resources
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 4. Notification for special classes (band, soccer, etc.) \
+# 4. Notification for special classes (band, soccer, etc.)
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 1. Information pop up for each class \
+# 1. Information pop up for each class
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
 
-# 2. Filter for Courses\
+# 2. Filter for Courses
 
-## Functionality \
+## Functionality
 
-## Design \
+## Design
 
-## QA \
+## QA
