@@ -15,13 +15,21 @@ The model schedule is an empty schedule on the screen that has empty slots for e
 
 ## QA \
 
-# 3. Inputting Classes into Schedule \
+# 3. Inputting Courses into Schedule \
 
-## Functionality \
+## Functionality \ 
+what it is 
+provides the list of courses from the database and allows user to click on them to select them.
+stores the selected courses in the user's list of selected courses. 
+Has a search bar to search for key words. The key words are used to sort through the list of all the classes. 
 
-## Design \
 
-## QA \
+## Design \ 
+how it works 
+
+## QA \ 
+vefifying that it works properly 
+user testing plan 
 
 # 4. Print/Email Schedule \
 
@@ -96,6 +104,14 @@ The bug report func
 ## QA \
 
 # 1. Information pop up for each class \
+
+## Functionality \
+
+## Design \
+
+## QA \
+
+# 2. Filter for Courses\
 
 ## Functionality \
 
