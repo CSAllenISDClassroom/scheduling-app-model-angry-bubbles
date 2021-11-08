@@ -1,4 +1,4 @@
-# List of Courses \
+# 1. List of Courses \
 
 ## Functionality \
 
@@ -6,7 +6,7 @@
 
 ## QA \
 
-# Model Schedule \
+# 2. Model Schedule \
 
 ## Functionality \
 
@@ -14,7 +14,7 @@
 
 ## QA \
 
-# Inputting Classes into Schedule \
+# 3. Inputting Classes into Schedule \
 
 ## Functionality \
 
@@ -22,7 +22,7 @@
 
 ## QA \
 
-# Print/Email Schedule \
+# 4. Print/Email Schedule \
 
 ## Functionality \
 
@@ -30,7 +30,7 @@
 
 ## QA \
 
-# Help Ticket Button \
+# 1. Help Ticket Button \
 
 ## Functionality \
 
@@ -38,7 +38,7 @@
 
 ## QA \
 
-# Separation between A and B day, Spring and Fall \
+# 2. Separation between A and B day, Spring and Fall \
 
 ## Functionality \
 
@@ -46,7 +46,7 @@
 
 ## QA \
 
-# Warning upon creation of invalid schedule \
+# 3. Warning upon creation of invalid schedule \
 
 ## Functionality \
 
@@ -54,7 +54,7 @@
 
 ## QA \
 
-# Shows classes available once period is highlighted \
+# 4. Shows classes available once period is highlighted \
 
 ## Functionality \
 
@@ -62,7 +62,7 @@
 
 ## QA \
 
-# Shows periods available once class is highlighted \
+# 1. Shows periods available once class is highlighted \
 
 ## Functionality \
 
@@ -70,7 +70,7 @@
 
 ## QA \
 
-# Bug Report \
+# 2. Bug Report \
 
 ## Functionality \
 
@@ -78,7 +78,7 @@
 
 ## QA \
 
-# Link to Resources \
+# 3. Link to Resources \
 
 ## Functionality \
 
@@ -86,7 +86,7 @@
 
 ## QA \
 
-# Notification for special classes (band, soccer, etc.) \
+# 4. Notification for special classes (band, soccer, etc.) \
 
 ## Functionality \
 
@@ -94,7 +94,7 @@
 
 ## QA \
 
-# Information pop up for each class \
+# 1. Information pop up for each class \
 
 ## Functionality \
 
