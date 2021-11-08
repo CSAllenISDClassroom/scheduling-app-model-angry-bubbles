@@ -69,9 +69,6 @@ until the conflict is resolved.\
  overlapping classes 
  campus conflicts 
  
-
-
-
 ## Design \
 
 ## QA \
@@ -96,6 +93,7 @@ until the conflict is resolved.\
 
 ## Functionality \
 The bug report function: There's a button that users can click on to report a bug. Upon clicking the button, they're brought to a new page. On the page there will be 3 text boxes. In one they'll state how they got to the bug. In another text box they'll explain what the problem that they're experiencing is. In the 3rd text box, they'll leave their email if we may need to contact them for further information or if their bug was handled or not.
+
 ## Design \
 
 ## QA \
@@ -103,7 +101,8 @@ The bug report function: There's a button that users can click on to report a bu
 # 3. Link to Resources \
 
 ## Functionality \
-
+	Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the vary end and includes a list of resources to all the pages.
+	
 ## Design \
 
 ## QA \
