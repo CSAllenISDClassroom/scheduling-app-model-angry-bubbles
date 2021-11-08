@@ -1,7 +1,11 @@
 # List of Courses \
 
 ## Functionality \
+Every possible course will be listed initially, but a search engine will be available to make accessibility of courses more easier by the user. The search engine will receive user input and compare it with the list of courses to filter by keyword.
 
+Furthermore, the search engine will also be assisted by filters to further narrow down the list of courses to ones that the user desires. Possible filters to narrow 
+
+Once the user finds their desired course, they can add it to their model schedule to proceed to the next step of organising a schedule.
 ## Design \
 
 ## QA \
