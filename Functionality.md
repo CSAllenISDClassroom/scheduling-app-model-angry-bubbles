@@ -110,3 +110,11 @@ user testing plan
 ## Design \
 
 ## QA \
+
+# 2. Filter for Courses\
+
+## Functionality \
+
+## Design \
+
+## QA \
