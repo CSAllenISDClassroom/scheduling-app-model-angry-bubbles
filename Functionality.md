@@ -20,12 +20,13 @@ The model schedule is an empty schedule on the screen that has empty slots for e
 ## Functionality \ 
 what it is 
 provides the list of courses from the database and allows user to click on them to select them.
-stores the selected courses in the user's list of selected courses. 
 Has a search bar to search for key words. The key words are used to sort through the list of all the classes. 
-
+stores the selected courses in the user's list of selected courses. The user can use the list of selected courses to 
+put them in the model schedule.
 
 ## Design \ 
 how it works 
+There is a list of available classes from a database 
 
 ## QA \ 
 vefifying that it works properly 
@@ -58,6 +59,7 @@ user testing plan
 # 3. Warning upon creation of invalid schedule \
 
 ## Functionality \
+
 
 ## Design \
 
