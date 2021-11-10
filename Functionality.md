@@ -5,7 +5,7 @@ Every possible course will be listed initially, but a search engine will be avai
 ## Design
 
 ## QA
-
+The list of courses will be verified by ensuring every existing course appears on the list in addition to ensuring that the search engine and filters correctly isolate courses by keyword and other respective categories.
 # 2. Model Schedule
 
 ## Functionality
