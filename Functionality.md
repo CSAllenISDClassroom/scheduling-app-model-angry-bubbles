@@ -35,7 +35,7 @@ user testing plan
 # 4. Print/Email Schedule
 
 ## Functionality
-
+After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
 ## Design
 
 ## QA
@@ -100,6 +100,7 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 ## QA
 
 # 4. Notification for special classes (band, soccer, etc.)
+If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
 ## Functionality
 
