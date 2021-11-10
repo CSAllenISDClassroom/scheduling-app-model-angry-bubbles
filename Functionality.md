@@ -121,7 +121,6 @@ If the user selects a designated 'special' class, an alert is given notifying th
 ## QA
 
 # 1. Elaborated Course Description
->>>>>>> 480e9115349a5bfc3670b9f9a44cb3fe0ad61ba8
 
 ## Functionality
 User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
@@ -138,15 +137,6 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 
 ## QA
 
-<<<<<<< HEAD
-# Navbar
-
-## Functionality
-
-## Design 
-
-## QA
-
 # 3 Step Process for Scheduling
 
 ## Functionality
@@ -154,12 +144,11 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 ## Design
 
 ## QA
-=======
+
 # Navigation Bar
 
 ## Functionality 
 A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
 ## Design
 
-## QA 
->>>>>>> 2599592c85a63e7fb83f14a914c7a73cddd10eb4
+## QA
