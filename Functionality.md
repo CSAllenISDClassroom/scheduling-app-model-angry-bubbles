@@ -43,6 +43,7 @@ user testing plan
 # 1. Help Ticket Button
 
 ## Functionality
+The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
 
 ## Design
 
@@ -125,17 +126,25 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 
 # 2. Filter for Courses
 
-## Functionality \
-Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
-## Design \
+## Functionality
+Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods.
 
-## QA \
+## Design
 
-# Navbar \
+## QA
 
-## Functionality \
+# Navbar
 
-## Design \ 
+## Functionality
 
-## QA \
+## Design 
 
+## QA
+
+# 3 Step Process for Scheduling
+
+## Functionality
+
+## Design
+
+## QA
