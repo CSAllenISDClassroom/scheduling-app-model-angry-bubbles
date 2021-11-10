@@ -12,6 +12,7 @@ Every possible course will be listed initially, but a search engine will be avai
 The model schedule is an empty schedule on the screen that has empty slots for each period. The term "Model Schedule" refers to the user interface displayed on the screen. The user interface for this should look like the interface for the empty schedule in the scheduler app last year (2020-2021). Courses can be dragged into and out of the slots on the model schedule. It will have spots for each period (0-8), but the 0, 1, and 8 period spots will be there for both A days and B days. Furthermore, there will be a a second interface for the second semester, to account for semester long classes.
 
 ## Design
+The model schedule will be class consisting of an array of 9 courses (to represent each period). This array will initially be empty. The index number corresponds to a period (index 0 is period 0, index 8 is period 8, etc.). As the user puts courses into their model schedule, this array will update and have a course in the period that the user specified. Each time a new course is put into the model schedule, there should be a check to make sure that the user isn't putting a course not available in that period (i.e. if physics is only available period 6 and period 3, and the user is attempting to place physics in period 2). If the check fails, then a warning message should pop up above the model schedule explaining that the user is attempting to place a course in a period that is invalid. There should be 2 model schedule classes for each year, one for the fall semester and one for the spring semester. When the user is finished, they will click on a "complete schedule" button. Upon clicking this, there should be a check to ensure that there are no class time conflicts, travel issues, or school time issues (the schedule should fulfill the minimum minutes per day requirement).
 
 ## QA
 
@@ -77,22 +78,6 @@ until the conflict is resolved.\
  campus conflicts 
  
 ## Design \
-## QA
-
-# 4. Shows classes available once period is highlighted
-
-## Functionality
-Once the user has selected their courses from all available courses, on the next section where they have empty slots for the schedule that they need to input their courses to, a user can hover over a slot in the empty slot schedule and the courses availiable in that period will be highlighted. This is availiable to all periods listed in their course selection.
-## Design
-
-## QA
-
-# 1. Shows periods available once class is highlighted
-
-## Functionality
-
-## Design
-
 ## QA
 
 # 2. Bug Report
