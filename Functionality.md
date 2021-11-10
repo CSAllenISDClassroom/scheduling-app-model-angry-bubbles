@@ -107,14 +107,14 @@ If the user selects a designated 'special' class, an alert is given notifying th
 
 ## QA
 
-# 1. Information pop up for each class
+# 1. Elaborated Course Description
 
 ## Functionality
-
+User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
 ## Design
-
+When a user requests further information on a course, a pop up window will be displayed so that the user information can be read alongside other courses and the model scheduler.
 ## QA
-
+The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
 ## Functionality \
@@ -123,11 +123,10 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 
 ## QA \
 
-# Navbar \
+# Navigation Bar
 
-## Functionality \
+## Functionality 
+A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
+## Design
 
-## Design \ 
-
-## QA \
-
+## QA 
