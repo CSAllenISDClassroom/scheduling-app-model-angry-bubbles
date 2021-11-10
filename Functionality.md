@@ -29,9 +29,7 @@ put them in the model schedule.
 There would be a data structure for the selected courses: a list because it doesn't need to be ordered. There would be a data structure for the schedule and that would be an array because it is ordered, and the indexes in the array would fit the class schedule (zero index -> zero period). It would be an optional array for class type course as there is the possibilty that a student does not have classes in certain periods such as zero period. Once they select a course from their selected courses, it will remove it from the list and copy it into the array. If they want to tske a class off the schedule, then they would have to click and drag it back: making the value in the array nil and adding it back into the list.
 
 ## QA 
-vefifying that it works properly 
-user testing plan 
-
+User is able to put courses into the schedule and courses that have conflicts with other classes will be stopped. And only courses selected by the user will be displayed. Make sure that the courses will not disappear once another course has been selected for a fifth period. Their data should also be saved if they navigate away from the page.
 # 4. Print/Email Schedule
 
 ## Functionality
@@ -134,6 +132,11 @@ The information pop up window will have to be checked and ensured to be accurate
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods.
 
 ## Design
+String Course Difficulty
+The difficulty would be a changing property in the courses like IB, AP, Adv., and On-level.
+
+let Period = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Filters the periods through an array for every type of class.
 
 ## QA
 
@@ -145,10 +148,3 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 
 ## QA
 
-# Navigation Bar
-
-## Functionality 
-A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
-## Design
-
-## QA
