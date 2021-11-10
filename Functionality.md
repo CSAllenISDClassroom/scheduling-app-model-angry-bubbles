@@ -143,3 +143,11 @@ A navigation bar will allow users to access easily access resources and tools fo
 ## Design
 
 ## QA 
+
+# Create Alternate Schedule
+
+## Functionality
+
+## Design
+
+## QA
