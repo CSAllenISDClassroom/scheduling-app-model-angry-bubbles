@@ -5,13 +5,14 @@ Every possible course will be listed initially, but a search engine will be avai
 ## Design
 
 ## QA
-
+The list of courses will be verified by ensuring every existing course appears on the list in addition to ensuring that the search engine and filters correctly isolate courses by keyword and other respective categories.
 # 2. Model Schedule
 
 ## Functionality
 The model schedule is an empty schedule on the screen that has empty slots for each period. The term "Model Schedule" refers to the user interface displayed on the screen. The user interface for this should look like the interface for the empty schedule in the scheduler app last year (2020-2021). Courses can be dragged into and out of the slots on the model schedule. It will have spots for each period (0-8), but the 0, 1, and 8 period spots will be there for both A days and B days. Furthermore, there will be a a second interface for the second semester, to account for semester long classes.
 
 ## Design
+The model schedule will be class consisting of an array of 9 courses (to represent each period). This array will initially be empty. The index number corresponds to a period (index 0 is period 0, index 8 is period 8, etc.). As the user puts courses into their model schedule, this array will update and have a course in the period that the user specified. Each time a new course is put into the model schedule, there should be a check to make sure that the user isn't putting a course not available in that period (i.e. if physics is only available period 6 and period 3, and the user is attempting to place physics in period 2). If the check fails, then a warning message should pop up above the model schedule explaining that the user is attempting to place a course in a period that is invalid. There should be 2 model schedule classes for each year, one for the fall semester and one for the spring semester. When the user is finished, they will click on a "complete schedule" button. Upon clicking this, there should be a check to ensure that there are no class time conflicts, travel issues, or school time issues (the schedule should fulfill the minimum minutes per day requirement).
 
 ## QA
 
@@ -35,20 +36,23 @@ user testing plan
 
 ## Functionality
 After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
+
 ## Design
-1) Convert the current schedule to a PDF format ()
+
+*Usage of APIs for printing and emailing 
 
 1) Printing
 
 * If print button is clicked 
+> Could trigger the use of an API
 * Convert current schedule to PDF Format
 * Send PDF to the computer's printer interface
 * From this point forward the user can print as desired
 
 2) Emailing
 
-
 * If email button is clicked 
+> Could trigger the use of an API
 * Convert current schedule to PDF Format
 * If signed into an email, the PDF would be attached in a new draft
 * From this point forward the user can deignate someone to send to or edit the email as desired 
@@ -81,22 +85,6 @@ It would have multiple checks before they can proceed to the final section where
 
 ## QA
 
-# 4. Shows classes available once period is highlighted
-
-## Functionality
-Once the user has selected their courses from all available courses, on the next section where they have empty slots for the schedule that they need to input their courses to, a user can hover over a slot in the empty slot schedule and the courses availiable in that period will be highlighted. This is availiable to all periods listed in their course selection.
-## Design
-
-## QA
-
-# 1. Shows periods available once class is highlighted
-
-## Functionality
-
-## Design
-
-## QA
-
 # 2. Bug Report
 
 ## Functionality \
@@ -117,25 +105,28 @@ There would be a dictionary where the key is the name of the resource and the va
 ## QA
 
 # 4. Notification for special classes (band, soccer, etc.)
+
+## Functionality
 If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
-## Functionality
-1) Usuer selects a class
+## Design
+1) User selects a class
 2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
+* Special classes will be indicated by a variable inside the object of the course, set to True or False
+* True indicates a special coyrse, while False indicates a regular one
+* The program would check if the indicator is False or True before notifying the user about the special class
 3) Show descriptive text regarding the conflict
 
-## Design
-
 ## QA
 
-# 1. Information pop up for each class
+# 1. Elaborated Course Description
 
 ## Functionality
-
+User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
 ## Design
-
+When a user requests further information on a course, a pop up window will be displayed so that the user information can be read alongside other courses and the model scheduler.
 ## QA
-
+The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
 ## Functionality \
@@ -144,11 +135,10 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 
 ## QA \
 
-# Navbar \
+# Navigation Bar
 
-## Functionality \
+## Functionality 
+A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
+## Design
 
-## Design \ 
-
-## QA \
-
+## QA 
