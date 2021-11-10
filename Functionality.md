@@ -81,22 +81,6 @@ until the conflict is resolved.\
 ## Design \
 ## QA
 
-# 4. Shows classes available once period is highlighted
-
-## Functionality
-Once the user has selected their courses from all available courses, on the next section where they have empty slots for the schedule that they need to input their courses to, a user can hover over a slot in the empty slot schedule and the courses availiable in that period will be highlighted. This is availiable to all periods listed in their course selection.
-## Design
-
-## QA
-
-# 1. Shows periods available once class is highlighted
-
-## Functionality
-
-## Design
-
-## QA
-
 # 2. Bug Report
 
 ## Functionality \
