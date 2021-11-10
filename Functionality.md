@@ -5,7 +5,7 @@ Every possible course will be listed initially, but a search engine will be avai
 ## Design
 
 ## QA
-
+The list of courses will be verified by ensuring every existing course appears on the list in addition to ensuring that the search engine and filters correctly isolate courses by keyword and other respective categories.
 # 2. Model Schedule
 
 ## Functionality
@@ -82,6 +82,8 @@ until the conflict is resolved.\
  campus conflicts 
  
 ## Design \
+It would have multiple checks before they can proceed to the final section where they print/submit their schedule. These checks would include making sure they have enough academic minutes for A day and B day, making sure STEAM and Dual Credit classes don't overlap, making sure that priviledge period is not during 3rd or 6th period, and that not more than 3 privledge periods are selected. And making sure that they have at least one privledge period and one extra if they have a zero period. Functions for checking a schedule for its validity.
+
 ## QA
 
 # 2. Bug Report
@@ -99,6 +101,7 @@ The bug report function: There's a button that users can click on to report a bu
 Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the vary end and includes a list of resources to all the pages.
 	
 ## Design \
+There would be a dictionary where the key is the name of the resource and the value is the resource itself which will be linked on the website.
 
 ## QA
 
@@ -117,14 +120,15 @@ If the user selects a designated 'special' class, an alert is given notifying th
 
 ## QA
 
-# 1. Information pop up for each class
+# 1. Elaborated Course Description
+>>>>>>> 480e9115349a5bfc3670b9f9a44cb3fe0ad61ba8
 
 ## Functionality
-
+User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
 ## Design
-
+When a user requests further information on a course, a pop up window will be displayed so that the user information can be read alongside other courses and the model scheduler.
 ## QA
-
+The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
 ## Functionality
@@ -134,6 +138,7 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 
 ## QA
 
+<<<<<<< HEAD
 # Navbar
 
 ## Functionality
@@ -149,3 +154,12 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 ## Design
 
 ## QA
+=======
+# Navigation Bar
+
+## Functionality 
+A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
+## Design
+
+## QA 
+>>>>>>> 2599592c85a63e7fb83f14a914c7a73cddd10eb4
