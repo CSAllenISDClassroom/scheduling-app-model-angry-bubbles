@@ -36,20 +36,23 @@ user testing plan
 
 ## Functionality
 After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
+
 ## Design
-1) Convert the current schedule to a PDF format ()
+
+*Usage of APIs for printing and emailing 
 
 1) Printing
 
 * If print button is clicked 
+> Could trigger the use of an API
 * Convert current schedule to PDF Format
 * Send PDF to the computer's printer interface
 * From this point forward the user can print as desired
 
 2) Emailing
 
-
 * If email button is clicked 
+> Could trigger the use of an API
 * Convert current schedule to PDF Format
 * If signed into an email, the PDF would be attached in a new draft
 * From this point forward the user can deignate someone to send to or edit the email as desired 
@@ -106,6 +109,9 @@ If the user selects a designated 'special' class, an alert is given notifying th
 ## Design
 1) User selects a class
 2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
+*Special classes will be indicated by a variable inside the object of the course, set to True or False
+*True indicates a special coyrse, while False indicates a regular one
+* The program would check if the indicator is False or True before notifying the user about the special class
 3) Show descriptive text regarding the conflict
 
 ## QA
