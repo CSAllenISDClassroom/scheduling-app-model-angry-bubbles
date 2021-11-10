@@ -26,8 +26,7 @@ stores the selected courses in the user's list of selected courses. The user can
 put them in the model schedule.
 
 ## Design 
-how it works 
-There is a list of available classes from a database 
+There would be a data structure for the selected courses: a list because it doesn't need to be ordered. There would be a data structure for the schedule and that would be an array because it is ordered, and the indexes in the array would fit the class schedule (zero index -> zero period). It would be an optional array for class type course as there is the possibilty that a student does not have classes in certain periods such as zero period. Once they select a course from their selected courses, it will remove it from the list and copy it into the array. If they want to tske a class off the schedule, then they would have to click and drag it back: making the value in the array nil and adding it back into the list.
 
 ## QA 
 vefifying that it works properly 
@@ -103,6 +102,9 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
 ## Functionality
+1) Usuer selects a class
+2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
+3) Show descriptive text regarding the conflict
 
 ## Design
 
