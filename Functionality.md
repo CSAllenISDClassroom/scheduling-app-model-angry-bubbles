@@ -12,6 +12,7 @@ Every possible course will be listed initially, but a search engine will be avai
 The model schedule is an empty schedule on the screen that has empty slots for each period. The term "Model Schedule" refers to the user interface displayed on the screen. The user interface for this should look like the interface for the empty schedule in the scheduler app last year (2020-2021). Courses can be dragged into and out of the slots on the model schedule. It will have spots for each period (0-8), but the 0, 1, and 8 period spots will be there for both A days and B days. Furthermore, there will be a a second interface for the second semester, to account for semester long classes.
 
 ## Design
+The model schedule will be class consisting of an array of 9 courses (to represent each period). This array will initially be empty. The index number corresponds to a period (index 0 is period 0, index 8 is period 8, etc.). As the user puts courses into their model schedule, this array will update and have a course in the period that the user specified. Each time a new course is put into the model schedule, there should be a check to make sure that the user isn't putting a course not available in that period (i.e. if physics is only available period 6 and period 3, and the user is attempting to place physics in period 2). If the check fails, then a warning message should pop up above the model schedule explaining that the user is attempting to place a course in a period that is invalid. There should be 2 model schedule classes for each year, one for the fall semester and one for the spring semester. When the user is finished, they will click on a "complete schedule" button. Upon clicking this, there should be a check to ensure that there are no class time conflicts, travel issues, or school time issues (the schedule should fulfill the minimum minutes per day requirement).
 
 ## QA
 
@@ -25,8 +26,7 @@ stores the selected courses in the user's list of selected courses. The user can
 put them in the model schedule.
 
 ## Design 
-how it works 
-There is a list of available classes from a database 
+There would be a data structure for the selected courses: a list because it doesn't need to be ordered. There would be a data structure for the schedule and that would be an array because it is ordered, and the indexes in the array would fit the class schedule (zero index -> zero period). It would be an optional array for class type course as there is the possibilty that a student does not have classes in certain periods such as zero period. Once they select a course from their selected courses, it will remove it from the list and copy it into the array. If they want to tske a class off the schedule, then they would have to click and drag it back: making the value in the array nil and adding it back into the list.
 
 ## QA 
 vefifying that it works properly 
@@ -35,8 +35,27 @@ user testing plan
 # 4. Print/Email Schedule
 
 ## Functionality
+After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
 
 ## Design
+
+*Usage of APIs for printing and emailing 
+
+1) Printing
+
+* If print button is clicked 
+> Could trigger the use of an API
+* Convert current schedule to PDF Format
+* Send PDF to the computer's printer interface
+* From this point forward the user can print as desired
+
+2) Emailing
+
+* If email button is clicked 
+> Could trigger the use of an API
+* Convert current schedule to PDF Format
+* If signed into an email, the PDF would be attached in a new draft
+* From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
 
@@ -44,14 +63,6 @@ user testing plan
 
 ## Functionality
 The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
-
-## Design
-
-## QA
-
-# 2. Separation between A and B day, Spring and Fall
-
-## Functionality
 
 ## Design
 
@@ -71,23 +82,6 @@ until the conflict is resolved.\
  campus conflicts 
  
 ## Design \
-
-## QA
-
-# 4. Shows classes available once period is highlighted
-
-## Functionality
-
-## Design
-
-## QA
-
-# 1. Shows periods available once class is highlighted
-
-## Functionality
-
-## Design
-
 ## QA
 
 # 2. Bug Report
@@ -111,8 +105,15 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 # 4. Notification for special classes (band, soccer, etc.)
 
 ## Functionality
+If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
 ## Design
+1) User selects a class
+2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
+* Special classes will be indicated by a variable inside the object of the course, set to True or False
+* True indicates a special coyrse, while False indicates a regular one
+* The program would check if the indicator is False or True before notifying the user about the special class
+3) Show descriptive text regarding the conflict
 
 ## QA
 
