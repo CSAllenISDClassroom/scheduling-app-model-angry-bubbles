@@ -35,20 +35,12 @@ user testing plan
 # 4. Print/Email Schedule
 
 ## Functionality
-
+After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
 ## Design
 
 ## QA
 
 # 1. Help Ticket Button
-
-## Functionality
-
-## Design
-
-## QA
-
-# 2. Separation between A and B day, Spring and Fall
 
 ## Functionality
 
@@ -70,13 +62,12 @@ until the conflict is resolved.\
  campus conflicts 
  
 ## Design \
-
 ## QA
 
 # 4. Shows classes available once period is highlighted
 
 ## Functionality
-
+Once the user has selected their courses from all available courses, on the next section where they have empty slots for the schedule that they need to input their courses to, a user can hover over a slot in the empty slot schedule and the courses availiable in that period will be highlighted. This is availiable to all periods listed in their course selection.
 ## Design
 
 ## QA
@@ -108,6 +99,7 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 ## QA
 
 # 4. Notification for special classes (band, soccer, etc.)
+If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
 ## Functionality
 
