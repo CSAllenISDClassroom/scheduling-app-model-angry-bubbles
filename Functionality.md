@@ -115,14 +115,14 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 ## QA
 
 # 4. Notification for special classes (band, soccer, etc.)
-If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
 ## Functionality
-1) Usuer selects a class
-2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
-3) Show descriptive text regarding the conflict
+If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
 ## Design
+1) User selects a class
+2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
+3) Show descriptive text regarding the conflict
 
 ## QA
 
