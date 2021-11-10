@@ -116,6 +116,7 @@ If the user selects a designated 'special' class, an alert is given notifying th
 
 ## QA
 
+
 # 1. Information pop up for each class
 
 ## Functionality
