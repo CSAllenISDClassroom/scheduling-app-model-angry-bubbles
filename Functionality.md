@@ -58,10 +58,18 @@ user testing plan
 
 # 3. Warning upon creation of invalid schedule
 
-## Functionality
-
-
-## Design
+## Functionality \ 
+When the user is creating their schedule by placing their classes in different class periods into the model 
+scheduler, if a class is placed where there is a conflict there will be red text at the top of the screen that
+notifies the user that there is a conflict in the schedule, and the user will not be able to place courses in their schedule
+until the conflict is resolved.\
+ some conflicts include but are not limitted to: \
+ invalid privellage period 
+ not enough courses/minutes 
+ overlapping classes 
+ campus conflicts 
+ 
+## Design \
 
 ## QA
 
@@ -83,17 +91,19 @@ user testing plan
 
 # 2. Bug Report
 
-## Functionality
-The bug report func
-## Design
+## Functionality \
+The bug report function: There's a button that users can click on to report a bug. Upon clicking the button, they're brought to a new page. On the page there will be 3 text boxes. In one they'll state how they got to the bug. In another text box they'll explain what the problem that they're experiencing is. In the 3rd text box, they'll leave their email if we may need to contact them for further information or if their bug was handled or not.
+
+## Design \
 
 ## QA
 
 # 3. Link to Resources
 
-## Functionality
-
-## Design
+## Functionality \
+	Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the vary end and includes a list of resources to all the pages.
+	
+## Design \
 
 ## QA
 
@@ -115,8 +125,17 @@ The bug report func
 
 # 2. Filter for Courses
 
-## Functionality
+## Functionality \
+Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
+## Design \
 
-## Design
+## QA \
 
-## QA
+# Navbar \
+
+## Functionality \
+
+## Design \ 
+
+## QA \
+
