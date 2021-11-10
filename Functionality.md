@@ -77,6 +77,8 @@ until the conflict is resolved.\
  campus conflicts 
  
 ## Design \
+It would have multiple checks before they can proceed to the final section where they print/submit their schedule. These checks would include making sure they have enough academic minutes for A day and B day, making sure STEAM and Dual Credit classes don't overlap, making sure that priviledge period is not during 3rd or 6th period, and that not more than 3 privledge periods are selected. And making sure that they have at least one privledge period and one extra if they have a zero period. Functions for checking a schedule for its validity.
+
 ## QA
 
 # 4. Shows classes available once period is highlighted
@@ -110,6 +112,7 @@ The bug report function: There's a button that users can click on to report a bu
 Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the vary end and includes a list of resources to all the pages.
 	
 ## Design \
+There would be a dictionary where the key is the name of the resource and the value is the resource itself which will be linked on the website.
 
 ## QA
 
