@@ -23,15 +23,13 @@ what it is
 provides the list of courses from the database and allows user to click on them to select them.
 Has a search bar to search for key words. The key words are used to sort through the list of all the classes. 
 stores the selected courses in the user's list of selected courses. The user can use the list of selected courses to 
-put them in the model schedule.
+drag and drop them in the model schedule.
 
 ## Design 
 There would be a data structure for the selected courses: a list because it doesn't need to be ordered. There would be a data structure for the schedule and that would be an array because it is ordered, and the indexes in the array would fit the class schedule (zero index -> zero period). It would be an optional array for class type course as there is the possibilty that a student does not have classes in certain periods such as zero period. Once they select a course from their selected courses, it will remove it from the list and copy it into the array. If they want to tske a class off the schedule, then they would have to click and drag it back: making the value in the array nil and adding it back into the list.
 
 ## QA 
-vefifying that it works properly 
-user testing plan 
-
+User is able to put courses into the schedule and courses that have conflicts with other classes will be stopped. And only courses selected by the user will be displayed. Make sure that the courses will not disappear once another course has been selected for a fifth period. Their data should also be saved if they navigate away from the page.
 # 4. Print/Email Schedule
 
 ## Functionality
@@ -97,7 +95,7 @@ The bug report function: There's a button that users can click on to report a bu
 # 3. Link to Resources
 
 ## Functionality \
-Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the very end and includes a list of resources to all the pages.
+Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the vary end and includes a list of resources to all the pages.
 	
 ## Design \
 There would be a dictionary where the key is the name of the resource and the value is the resource itself which will be linked on the website.
@@ -120,7 +118,6 @@ If the user selects a designated 'special' class, an alert is given notifying th
 ## QA
 
 # 1. Elaborated Course Description
->>>>>>> 480e9115349a5bfc3670b9f9a44cb3fe0ad61ba8
 
 ## Functionality
 User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
