@@ -109,8 +109,8 @@ If the user selects a designated 'special' class, an alert is given notifying th
 ## Design
 1) User selects a class
 2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
-*Special classes will be indicated by a variable inside the object of the course, set to True or False
-*True indicates a special coyrse, while False indicates a regular one
+* Special classes will be indicated by a variable inside the object of the course, set to True or False
+* True indicates a special coyrse, while False indicates a regular one
 * The program would check if the indicator is False or True before notifying the user about the special class
 3) Show descriptive text regarding the conflict
 
