@@ -48,14 +48,6 @@ user testing plan
 
 ## QA
 
-# 2. Separation between A and B day, Spring and Fall
-
-## Functionality
-
-## Design
-
-## QA
-
 # 3. Warning upon creation of invalid schedule
 
 ## Functionality \ 
