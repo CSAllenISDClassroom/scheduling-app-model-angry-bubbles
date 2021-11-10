@@ -97,7 +97,7 @@ The bug report function: There's a button that users can click on to report a bu
 # 3. Link to Resources
 
 ## Functionality \
-Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the vary end and includes a list of resources to all the pages.
+Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the very end and includes a list of resources to all the pages.
 	
 ## Design \
 There would be a dictionary where the key is the name of the resource and the value is the resource itself which will be linked on the website.
