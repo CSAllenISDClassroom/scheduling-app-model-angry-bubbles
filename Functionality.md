@@ -36,8 +36,24 @@ user testing plan
 # 4. Print/Email Schedule
 
 ## Functionality
-
+After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
 ## Design
+1) Convert the current schedule to a PDF format ()
+
+1) Printing
+
+* If print button is clicked 
+* Convert current schedule to PDF Format
+* Send PDF to the computer's printer interface
+* From this point forward the user can print as desired
+
+2) Emailing
+
+
+* If email button is clicked 
+* Convert current schedule to PDF Format
+* If signed into an email, the PDF would be attached in a new draft
+* From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
 
@@ -63,13 +79,12 @@ until the conflict is resolved.\
  campus conflicts 
  
 ## Design \
-
 ## QA
 
 # 4. Shows classes available once period is highlighted
 
 ## Functionality
-
+Once the user has selected their courses from all available courses, on the next section where they have empty slots for the schedule that they need to input their courses to, a user can hover over a slot in the empty slot schedule and the courses availiable in that period will be highlighted. This is availiable to all periods listed in their course selection.
 ## Design
 
 ## QA
@@ -101,6 +116,7 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 ## QA
 
 # 4. Notification for special classes (band, soccer, etc.)
+If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
 
 ## Functionality
 
