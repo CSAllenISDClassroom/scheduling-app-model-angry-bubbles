@@ -37,6 +37,22 @@ user testing plan
 ## Functionality
 After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
 ## Design
+1) Convert the current schedule to a PDF format ()
+
+1) Printing
+
+* If print button is clicked 
+* Convert current schedule to PDF Format
+* Send PDF to the computer's printer interface
+* From this point forward the user can print as desired
+
+2) Emailing
+
+
+* If email button is clicked 
+* Convert current schedule to PDF Format
+* If signed into an email, the PDF would be attached in a new draft
+* From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
 
