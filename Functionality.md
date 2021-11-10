@@ -23,25 +23,25 @@ what it is
 provides the list of courses from the database and allows user to click on them to select them.
 Has a search bar to search for key words. The key words are used to sort through the list of all the classes. 
 stores the selected courses in the user's list of selected courses. The user can use the list of selected courses to 
-put them in the model schedule.
+drag and drop them in the model schedule.
 
 ## Design 
 There would be a data structure for the selected courses: a list because it doesn't need to be ordered. There would be a data structure for the schedule and that would be an array because it is ordered, and the indexes in the array would fit the class schedule (zero index -> zero period). It would be an optional array for class type course as there is the possibilty that a student does not have classes in certain periods such as zero period. Once they select a course from their selected courses, it will remove it from the list and copy it into the array. If they want to tske a class off the schedule, then they would have to click and drag it back: making the value in the array nil and adding it back into the list.
 
 ## QA 
-vefifying that it works properly 
-user testing plan 
-
+User is able to put courses into the schedule and courses that have conflicts with other classes will be stopped. And only courses selected by the user will be displayed. Make sure that the courses will not disappear once another course has been selected for a fifth period. Their data should also be saved if they navigate away from the page.
 # 4. Print/Email Schedule
 
-## Functionality
-After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
+## Functionalityn
+After creating a valid schedule, a user canopt to send a PDF version of the finalized schedule to a printer or a designated email address. The use can click one of the two sepaarate buttons for printing/emaailing the schedule. The printer button should lead the uer to the printing interface that is used by the computer they are on, and it is pre-set to print a PDF of the schedule and the can make any changes to the printer settings and print the schedule. The emailing Button leads them to their Gmail acccount, if they are logged in the schedule is attached to an email and the user can input the email adress they want to send the schedule to. 
+
+Alternate Emailing option : After the user clicks the email button, they are able to input an email adress that the schedule will be sent to. The scheduling app sends an email with the PDF to the email specified. If it is unable to send , the schduling app displays a text box to the user that states  the schedule failed to be sent because the email adress was invalid. 
 
 ## Design
 
 *Usage of APIs for printing and emailing 
 
-1) Printing
+1) Printingp
 
 * If print button is clicked 
 > Could trigger the use of an API
@@ -59,9 +59,11 @@ After creating a valid schedule, a user can opt to send a PDF version of the fin
 
 ## QA
 
+
 # 1. Help Ticket Button
 
 ## Functionality
+The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
 
 ## Design
 
@@ -121,7 +123,6 @@ If the user selects a designated 'special' class, an alert is given notifying th
 ## QA
 
 # 1. Elaborated Course Description
->>>>>>> 480e9115349a5bfc3670b9f9a44cb3fe0ad61ba8
 
 ## Functionality
 User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
@@ -131,6 +132,27 @@ When a user requests further information on a course, a pop up window will be di
 The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
+<<<<<<< HEAD
+## Functionality
+Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods.
+
+## Design
+String Course Difficulty
+The difficulty would be a changing property in the courses like IB, AP, Adv., and On-level.
+
+let Period = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Filters the periods through an array for every type of class.
+
+## QA
+
+# 3 Step Process for Scheduling
+
+## Functionality
+
+## Design
+
+## QA
+=======
 ## Functionality \
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design \
@@ -144,3 +166,12 @@ A navigation bar will allow users to access easily access resources and tools fo
 ## Design
 
 ## QA 
+
+# Create Alternate Schedule
+>>>>>>> 4a1f31a14c2d8074cd01e63e589b9429914e8690
+
+## Functionality
+
+## Design
+
+## QA
