@@ -34,14 +34,16 @@ user testing plan
 
 # 4. Print/Email Schedule
 
-## Functionality
-After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address 
+## Functionalityn
+After creating a valid schedule, a user canopt to send a PDF version of the finalized schedule to a printer or a designated email address. The use can click one of the two sepaarate buttons for printing/emaailing the schedule. The printer button should lead the uer to the printing interface that is used by the computer they are on, and it is pre-set to print a PDF of the schedule and the can make any changes to the printer settings and print the schedule. The emailing Button leads them to their Gmail acccount, if they are logged in the schedule is attached to an email and the user can input the email adress they want to send the schedule to. 
+
+Alternate Emailing option : After the user clicks the email button, they are able to input an email adress that the schedule will be sent to. The scheduling app sends an email with the PDF to the email specified. If it is unable to send , the schduling app displays a text box to the user that states  the schedule failed to be sent because the email adress was invalid. 
 
 ## Design
 
 *Usage of APIs for printing and emailing 
 
-1) Printing
+1) Printingp
 
 * If print button is clicked 
 > Could trigger the use of an API
@@ -58,6 +60,7 @@ After creating a valid schedule, a user can opt to send a PDF version of the fin
 * From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
+
 
 # 1. Help Ticket Button
 
