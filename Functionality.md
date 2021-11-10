@@ -120,14 +120,17 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 ## Functionality \
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design \
+Class Courses
 
+Var Course type = {"Math", "Science", "English", etc..}
+The types of classes would be displayed and the user would choose a section and the user would be shown the classes that are part of that section.
+
+String Course Difficulty
+The difficulty would be a changing property in the courses like IB, AP, Adv., and On-level.
+
+let Period = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Filters the periods through an array for every type of class.
 ## QA \
 
 # Navbar \
-
-## Functionality \
-
-## Design \ 
-
-## QA \
 
