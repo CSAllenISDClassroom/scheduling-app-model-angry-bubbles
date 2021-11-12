@@ -160,12 +160,9 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 ## Design
 String Course Difficulty
 The difficulty would be a changing property in the courses like IB, AP, Adv., and On-level.
-
-let Period = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-Filters the periods through an array for every type of class.
-
+ 
 ## QA
-
+Make sure the dropdown menu is accessible and visible at all times. Make sure that all the sections for the courses are available. Once they click on a section then a list of courses should show in the Available Courses section. WHen they choose a filter for AP then it should show only the AP classes that are currently available(Same for On-level, IB, and Adv.). When 2 filters are chosen like Math and Adv. then it should only be showing Adv. Math class choices and nothing higher or lower.
 
 # Landing Page
 ## Functionality
