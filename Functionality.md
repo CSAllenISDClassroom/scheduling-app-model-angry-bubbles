@@ -186,7 +186,7 @@ There will be functionality for the users to specify which grade level they are 
 ## Design
 1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
 ## QA
-
+For each step, there will be a series of checks done to ensure that the user is completing their schedule with the correct amount of courses 
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design
