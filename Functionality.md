@@ -106,10 +106,11 @@ There would be a dictionary where the key is the name of the resource and the va
 
 ## QA
 
-# 4. Notification for special classes (band, soccer, etc.)
+# 4. Notification for special courses (band, soccer, etc.)
 
 ## Functionality
-If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
+If the user selects a'special' course, designated based on potiential conflicts that it may have, (campus conflicts - steam, CTC, AHS and LFC,timings for the course start early or stay late,extracurriculars like band,sports and orchestra)
+an alert is given notifying the user that the class could cause scheduling conflicts. The course title would be changed from it's initial color to red, and descriptive text would appear providing more information regarding the conflict. 
 
 ## Design
 1) User selects a class
@@ -120,6 +121,7 @@ If the user selects a designated 'special' class, an alert is given notifying th
 3) Show descriptive text regarding the conflict
 
 ## QA
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. 
 
 # 1. Elaborated Course Description
 
