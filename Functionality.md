@@ -65,15 +65,16 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 ## QA
 The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email.
 
-# 1. Help Ticket Button
+# 1. Help Ticket
 
 ## Functionality
-The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
+The help ticket will be featured as a way for users to ask any questions or issues they may encounter when creating a schedule. The help ticket will have various questions to narrow down the issue or question for a counselor to easily and quickly respond to the requests.
 
 ## Design
-Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
+The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email. Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
 
 ## QA
+We will ensure the the button leads to the correct google form link and properly sends a user's request to a counselor or guidance figure.
 
 # 3. Warning upon creation of invalid schedule
 
@@ -179,8 +180,10 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
 
 ## Design
+Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
 
 ## QA 
+
 
 # Create Alternate Schedule
 
