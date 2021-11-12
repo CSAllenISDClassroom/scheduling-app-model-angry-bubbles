@@ -67,16 +67,17 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email.
 To ensure that the final schedule is successfully converting into a pdf with the use of the print button, the user can create a schedule and click the button that allows them to download it as a PDF. If a PDF is downloaded to the desktop and successfuly opens rendering the PDF version of the schedule, the PDF button is successfully working.
 
+
 # 1. Help Ticket Button
 
 ## Functionality
 The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
 
 ## Design
-Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
+Depending on what we use to create the front end, we will use the appropriate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
 
 ## QA
-
+Make sure the help ticket button is able to be clicked from all pages. When the button is clicked, make sure that it links to the correct Google form. Make sure that the button is visible for those that need help.
 # 3. Warning upon creation of invalid schedule
 
 ## Functionality
@@ -100,7 +101,7 @@ Quality assurance for this feature would come from the user being notified if th
 ## Functionality
 The bug report function: There's a button that users can click on to report a bug. Upon clicking the button, they're brought to a new page. On the page there will be 3 text boxes. In one they'll state how they got to the bug. In another text box they'll explain what the problem that they're experiencing is. In the 3rd text box, they'll leave their email if we may need to contact them for further information or if their bug was handled or not.
 
-## Design \
+## Design
 The bug report button will lead to a google form where users can report bugs. The front end will program a button with the link to our bugs google form.
 
 ## QA
@@ -168,12 +169,25 @@ Filters the periods through an array for every type of class.
 
 ## QA
 
-# 3 Step Process for Scheduling
 
+# Landing Page
 ## Functionality
+There will be functionality for the users to specify which grade level they are in to streamline their course selction process.
 
 ## Design
 
+
+## QA
+
+
+# 3 Step Process for Scheduling
+
+## Functionality
+1. First step: The first step would allow users to select their courses from a list of all available courses. There will be a limit of twenty courses.The screen will be split up into sections with the left section, titled "Available Courses", containing a list of all available course with a search bar to locate courses with a filter to specify and the right section, titled "Selected Courses", containing the user selected courses. The course name itself will be shown on the left and the code will be shown on the right. There will be an icon available at the top of each section to provide information to the user upon being hovered over. The information will consist of details about what each section is about and how and what they should be doing in each section.
+2. Second step: 
+3.
+## Design
+1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
 ## QA
 
 ## Functionality
