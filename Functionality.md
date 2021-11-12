@@ -113,6 +113,7 @@ There would be a dictionary where the key is the name of the resource and the va
 
 ## QA
 The links to the resource offered would have to be verified in order to make sure that they take the users to their intended resource location. 
+
 # 4. Notification for special classes (band, soccer, etc.)
 
 ## Functionality
@@ -134,10 +135,13 @@ When the user selects any course from the list that has been predetermined to be
 
 ## Functionality
 User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
+
 ## Design
 When a user requests further information on a course, a pop up window will be displayed so that the user information can be read alongside other courses and the model scheduler.
+
 ## QA
 The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
+
 # 2. Filter for Courses
 
 ## Functionality
@@ -154,23 +158,10 @@ Filters the periods through an array for every type of class.
 
 # 3 Step Process for Scheduling
 
-## Functionality
-
-## Design
-
-## QA
-
-<<<<<<< HEAD
-
-## Functionality \
+## Functionality 
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 
-## Design \
-=======
-## Functionality
-Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design
->>>>>>> 86a4a65bbe646aa2bf4e759612632dce13fbb777
 
 ## QA
 
