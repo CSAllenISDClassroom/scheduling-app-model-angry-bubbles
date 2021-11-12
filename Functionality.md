@@ -169,9 +169,10 @@ Filters the periods through an array for every type of class.
 
 # Landing Page
 ## Functionality
-There will be functionality for the users to specify which grade level they are in to streamline their course selction process.
+There will be functionality for the users to specify which grade level they are in to streamline their course selection process. Upon arriving to the scheduler app, the screen will display a welcome text and there will be a drop down menu for the user to select their grade level for the incoming school year (e.g. 2022-2023). After selecting this, the screen will display the course selection page (first step of the 3 step process). 
 
 ## Design
+There will be html text that says "Welcome to the 2022-2023 scheduler app! Please select your grade level below." Then there will be a dropdown menu with the options 9, 10, 11, or 12.
 
 
 ## QA
