@@ -63,7 +63,9 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 * From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
+
 The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email.
+To ensure that the final schedule is successfully converting into a pdf with the use of the print button, the user can create a schedule and click the button that allows them to download it as a PDF. If a PDF is downloaded to the desktop and successfuly opens rendering the PDF version of the schedule, the PDF button is successfully working.
 
 # 1. Help Ticket Button
 
@@ -137,7 +139,8 @@ an alert is given notifying the user that the class could cause scheduling confl
 * This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
-When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary. 
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary: 
+check if the variable that designates a special course is set to true for the object of the course, check if the variable indicating the special course is used to change the color of the course and display an additional message. 
 Also, we need to determine that these notifications are specific to special courses solely, not normal courses, so some normal courses should be included while testing. 
 
 # 1. Elaborated Course Description
