@@ -2,7 +2,9 @@
 
 ## Functionality
 Every possible course will be listed initially, but a search engine will be available to make accessibility of courses more easier by the user. The search engine will receive user input and compare it with the list of courses to filter by keyword. Furthermore, the search engine will also be assisted by filters to further narrow down the list of courses to ones that the user desires. Possible filters to narrow down selections include subject, period, location, GPA, prerequisites, and grade requirements.
+
 ## Design
+The list of courses will be displayed across multiple pages and the number of courses displayed on each page could be determined by the user. As courses are viewed by the user and selected, rudimentary course information will be accessed through the database and mirroring information.
 
 ## QA
 The list of courses will be verified by ensuring every existing course appears on the list in addition to ensuring that the search engine and filters correctly isolate courses by keyword and other respective categories.
@@ -15,6 +17,7 @@ The model schedule is an empty schedule on the screen that has empty slots for e
 The model schedule will be class consisting of an array of 9 courses (to represent each period). This array will initially be empty. The index number corresponds to a period (index 0 is period 0, index 8 is period 8, etc.). As the user puts courses into their model schedule, this array will update and have a course in the period that the user specified. Each time a new course is put into the model schedule, there should be a check to make sure that the user isn't putting a course not available in that period (i.e. if physics is only available period 6 and period 3, and the user is attempting to place physics in period 2). If the check fails, then a warning message should pop up above the model schedule explaining that the user is attempting to place a course in a period that is invalid. There should be 2 model schedule classes for each year, one for the fall semester and one for the spring semester. When the user is finished, they will click on a "complete schedule" button. Upon clicking this, there should be a check to ensure that there are no class time conflicts, travel issues, or school time issues (the schedule should fulfill the minimum minutes per day requirement).
 
 ## QA
+The model schedule will be tested by ensuring that courses assigned by the user to its respective periods are updated in the user database as the user desires. Warnings should also appear and prevent the user from proceeding only if the combination of courses are truly invalid so that there are no false alarms or invalid schedules being marked as valid.
 
 # 3. Inputting Courses into Schedule
 
@@ -33,7 +36,7 @@ User is able to put courses into the schedule and courses that have conflicts wi
 # 4. Print/Email Schedule
 
 ## Functionality
-After creating a valid schedule, a user canopt to send a PDF version of the finalized schedule to a printer or a designated email address. The use can click one of the two sepaarate buttons for printing/emaailing the schedule. The printer button should lead the uer to the printing interface that is used by the computer they are on, and it is pre-set to print a PDF of the schedule and the can make any changes to the printer settings and print the schedule. The emailing Button leads them to their Gmail acccount, if they are logged in the schedule is attached to an email and the user can input the email adress they want to send the schedule to. 
+After creating a valid schedule, a user canopt to send a PDF version of the finalized schedule to a printer or a designated email address. The use can click one of the two sepaarate buttons for printing/emailing the schedule. The printer button should lead the uer to the printing interface that is used by the computer they are on, and it is pre-set to print a PDF of the schedule and the can make any changes to the printer settings and print the schedule. The emailing Button leads them to their Gmail acccount, if they are logged in the schedule is attached to an email and the user can input the email adress they want to send the schedule to. 
 
 Alternate Emailing option : After the user clicks the email button, they are able to input an email adress that the schedule will be sent to. The scheduling app sends an email with the PDF to the email specified. If it is unable to send , the schduling app displays a text box to the user that states  the schedule failed to be sent because the email adress was invalid. 
 
@@ -41,7 +44,7 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 
 *Usage of APIs for printing and emailing 
 
-1) Printingp
+1) Printing
 
 * If print button is clicked 
 > Could trigger the use of an API
@@ -58,6 +61,7 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 * From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
+The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email.
 
 # 1. Help Ticket Button
 
@@ -71,7 +75,7 @@ Depending on what we use to create the front end, we will use the appropiate lan
 
 # 3. Warning upon creation of invalid schedule
 
-## Functionality \ 
+## Functionality
 When the user is creating their schedule by placing their classes in different class periods into the model 
 scheduler, if a class is placed where there is a conflict there will be red text at the top of the screen that
 notifies the user that there is a conflict in the schedule, and the user will not be able to place courses in their schedule
@@ -82,14 +86,14 @@ until the conflict is resolved.\
  overlapping classes 
  campus conflicts 
  
-## Design \
+## Design
 It would have multiple checks before they can proceed to the final section where they print/submit their schedule. These checks would include making sure they have enough academic minutes for A day and B day, making sure STEAM and Dual Credit classes don't overlap, making sure that priviledge period is not during 3rd or 6th period, and that not more than 3 privledge periods are selected. And making sure that they have at least one privledge period and one extra if they have a zero period. Functions for checking a schedule for its validity.
 
 ## QA
-
+Quality assurance for this feature would come from the user being notified if there is a conflict with the placement of their courses in a specific place in their schedule via the red text that would pop to alert them as well as a function that would prevent them from adding that course to their schedule in the first place.
 # 2. Bug Report
 
-## Functionality \
+## Functionality
 The bug report function: There's a button that users can click on to report a bug. Upon clicking the button, they're brought to a new page. On the page there will be 3 text boxes. In one they'll state how they got to the bug. In another text box they'll explain what the problem that they're experiencing is. In the 3rd text box, they'll leave their email if we may need to contact them for further information or if their bug was handled or not.
 
 ## Design \
@@ -99,18 +103,19 @@ The bug report button will lead to a google form where users can report bugs. Th
 
 # 3. Link to Resources
 
-## Functionality \
+## Functionality
 Page that includes a list of resources for arena scheduling. This includes (but is not limited to) FAQ, Course descriptions in the Academic Planning Guide, Counslors webpage, Arena Scheduling Help Ticket. This is located in the navigation bar at the vary end and includes a list of resources to all the pages.
 	
-## Design \
+## Design
 There would be a dictionary where the key is the name of the resource and the value is the resource itself which will be linked on the website.
 
 ## QA
-
+The links to the resource offered would have to be verified in order to make sure that they take the users to their intended resource location. 
 # 4. Notification for special classes (band, soccer, etc.)
 
 ## Functionality
-If the user selects a designated 'special' class, an alert is given notifying the user that the class could cause scheduling conflicts. The class would be changed from it's initial color to red, with descriptive text regarding the conflict. 
+If the user selects a'special' course, designated based on potiential conflicts that it may have, (campus conflicts - steam, CTC, AHS and LFC,timings for the course start early or stay late,extracurriculars like band,sports and orchestra)
+an alert is given notifying the user that the class could cause scheduling conflicts. The course title would be changed from it's initial color to red, and descriptive text would appear providing more information regarding the conflict. 
 
 ## Design
 1) User selects a class
@@ -121,6 +126,7 @@ If the user selects a designated 'special' class, an alert is given notifying th
 3) Show descriptive text regarding the conflict
 
 ## QA
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. 
 
 # 1. Elaborated Course Description
 
@@ -145,6 +151,28 @@ Filters the periods through an array for every type of class.
 ## QA
 
 # 3 Step Process for Scheduling
+
+## Functionality
+
+## Design
+
+## QA
+
+## Functionality
+Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
+## Design
+
+## QA
+
+# Navigation Bar
+
+## Functionality 
+A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
+## Design
+
+## QA 
+
+# Create Alternate Schedule
 
 ## Functionality
 
