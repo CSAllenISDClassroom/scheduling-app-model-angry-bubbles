@@ -71,10 +71,10 @@ The printing and emailing feature will be tested by ensuring that the created sc
 The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
 
 ## Design
-Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
+Depending on what we use to create the front end, we will use the appropriate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
 
 ## QA
-
+Make sure the help ticket button is able to be clicked from all pages. When the button is clicked, make sure that it links to the correct Google form. Make sure that the button is visible for those that need help.
 # 3. Warning upon creation of invalid schedule
 
 ## Functionality
