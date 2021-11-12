@@ -63,19 +63,22 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 * From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
+
 The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email.
+To ensure that the final schedule is successfully converting into a pdf with the use of the print button, the user can create a schedule and click the button that allows them to download it as a PDF. If a PDF is downloaded to the desktop and successfuly opens rendering the PDF version of the schedule, the PDF button is successfully working.
 
 
-# 1. Help Ticket Button
+# 1. Help Ticket
 
 ## Functionality
-The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
+The help ticket will be featured as a way for users to ask any questions or issues they may encounter when creating a schedule. The help ticket will have various questions to narrow down the issue or question for a counselor to easily and quickly respond to the requests.
 
 ## Design
-Depending on what we use to create the front end, we will use the appropriate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
+The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email. Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
 
 ## QA
-Make sure the help ticket button is able to be clicked from all pages. When the button is clicked, make sure that it links to the correct Google form. Make sure that the button is visible for those that need help.
+We will ensure the the button leads to the correct google form link and properly sends a user's request to a counselor or guidance figure. Furthermore, the help ticket button must be accessible from all pages. When the button is clicked, make sure that it links to the correct Google form. Make sure that the button is visible for those that need help.
+
 # 3. Warning upon creation of invalid schedule
 
 ## Functionality
@@ -83,7 +86,7 @@ When the user is creating their schedule by placing their classes in different c
 scheduler, if a class is placed where there is a conflict there will be red text at the top of the screen that
 notifies the user that there is a conflict in the schedule, and the user will not be able to place courses in their schedule
 until the conflict is resolved.\
- some conflicts include but are not limitted to: \
+ some conflicts include but are not limited to: \
  invalid privellage period 
  not enough courses/minutes 
  overlapping classes 
@@ -138,7 +141,8 @@ an alert is given notifying the user that the class could cause scheduling confl
 * This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
-When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary. 
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary: 
+check if the variable that designates a special course is set to true for the object of the course, check if the variable indicating the special course is used to change the color of the course and display an additional message. 
 Also, we need to determine that these notifications are specific to special courses solely, not normal courses, so some normal courses should be included while testing. 
 
 # 1. Elaborated Course Description
@@ -183,7 +187,7 @@ There will be functionality for the users to specify which grade level they are 
 ## Design
 1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
 ## QA
-
+For each step, there will be a series of checks done to ensure that the user is completing their schedule with the correct amount of courses 
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design
@@ -193,11 +197,16 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 # Navigation Bar
 
 ## Functionality 
-A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
+A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information. At the very top of the page of the scheduler therre will be a bar that has buttons that allow the user to go to navigate to different parts of the scheduler: the list of courses for course selction, the current scehdule being built, and the final schedule along with other previously saved schedules and the option to save the scheudle as a PDF or email it. The navigation bar is available on all pages allowing the user to navigate back and forth. 
 
 ## Design
 
+The navigation bar could be reperesented using a class that has three seperate functions that render the objects that make up each of the three pages. Each of the three functions repond to the click of the user's mouse by calling the function associated with the button clicked. 
+Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
+>>>>>>> 03e7f3c54c14496ceb8eb145274ca2497f831c39
+
 ## QA 
+
 
 # Create Alternate Schedule
 
@@ -206,3 +215,20 @@ A navigation bar will allow users to access easily access resources and tools fo
 ## Design
 
 ## QA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
