@@ -106,7 +106,7 @@ The bug report function: There's a button that users can click on to report a bu
 The bug report button will lead to a google form where users can report bugs. The front end will program a button with the link to our bugs google form.
 
 ## QA
-
+Make sure the button is available in the correct location and it leads to the correct google form. 
 
 # 3. Link to Resources
 
