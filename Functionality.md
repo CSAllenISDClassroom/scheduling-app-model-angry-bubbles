@@ -86,7 +86,7 @@ until the conflict is resolved.\
 It would have multiple checks before they can proceed to the final section where they print/submit their schedule. These checks would include making sure they have enough academic minutes for A day and B day, making sure STEAM and Dual Credit classes don't overlap, making sure that priviledge period is not during 3rd or 6th period, and that not more than 3 privledge periods are selected. And making sure that they have at least one privledge period and one extra if they have a zero period. Functions for checking a schedule for its validity.
 
 ## QA
-
+Quality assurance for this feature would come from the user being notified if there is a conflict with the placement of their courses in a specific place in their schedule via the red text that would pop to alert them as well as a function that would prevent them from adding that course to their schedule in the first place.
 # 2. Bug Report
 
 ## Functionality \
@@ -105,7 +105,7 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 There would be a dictionary where the key is the name of the resource and the value is the resource itself which will be linked on the website.
 
 ## QA
-
+The links to the resource offered would have to be verified in order to make sure that they take the users to their intended resource location. 
 # 4. Notification for special classes (band, soccer, etc.)
 
 ## Functionality
@@ -131,7 +131,6 @@ When a user requests further information on a course, a pop up window will be di
 The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
-<<<<<<< HEAD
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods.
 
@@ -167,7 +166,6 @@ A navigation bar will allow users to access easily access resources and tools fo
 ## QA 
 
 # Create Alternate Schedule
->>>>>>> 4a1f31a14c2d8074cd01e63e589b9429914e8690
 
 ## Functionality
 
