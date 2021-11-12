@@ -103,6 +103,7 @@ The bug report function: There's a button that users can click on to report a bu
 The bug report button will lead to a google form where users can report bugs. The front end will program a button with the link to our bugs google form.
 
 ## QA
+Make sure the button is available in the correct location and it leads to the correct google form. 
 
 # 3. Link to Resources
 
@@ -199,6 +200,10 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
 
 ## Design
+
+The navigation bar could be reperesented using a class that has three seperate functions that render the objects that make up each of the three pages. Each of the three functions repond to the click of the user's mouse by calling the function associated with the button clicked. 
+Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
+>>>>>>> 5b7fd14934bef2c3e499f5738a3539c3081a767a
 
 ## QA 
 
