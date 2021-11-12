@@ -125,11 +125,20 @@ an alert is given notifying the user that the class could cause scheduling confl
 2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
 * Special classes will be indicated by a variable inside the object of the course, set to True or False
 * True indicates a special coyrse, while False indicates a regular one
+* Special courses would include STEAM / Lowery / Transportation-needed courses, Sports, Early/Late courses, band, etc
 * The program would check if the indicator is False or True before notifying the user about the special class
 3) Show descriptive text regarding the conflict
+* For example, for a late course, text would show regarding the fact that the course would last longer than a regular Allen high school course duration 
+> "Note: This course runs past the regular course duration"
+* Other possible warnings
+> "Note: This course is at an alternate location, which may cause scheduling issues"
+> "Note: This course runs on a different schedule [Dual credit, STEAM, etc] which may cause scheduling issues"
+> "Note: This course requires you to arrive earlier in the morning than an average 0/1st period course"
+* This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
-When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. 
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary. 
+Also, we need to determine that these notifications are specific to special courses solely, not normal courses, so some normal courses should be included while testing. 
 
 # 1. Elaborated Course Description
 
@@ -158,9 +167,14 @@ Filters the periods through an array for every type of class.
 
 # 3 Step Process for Scheduling
 
-## Functionality 
-Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
+## Functionality
 
+## Design
+
+## QA
+
+## Functionality
+Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design
 
 ## QA
