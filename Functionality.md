@@ -1,46 +1,42 @@
-# 1. List of Courses
+# List of Courses
 
 ## Functionality
-Every possible course will be listed initially, but a search engine will be available to make accessibility of courses more easier by the user. The search engine will receive user input and compare it with the list of courses to filter by keyword. Furthermore, the search engine will also be assisted by filters to further narrow down the list of courses to ones that the user desires. Possible filters to narrow down selections include subject, period, location, GPA, prerequisites, and grade requirements.
+Every possible course will be listed initially, but a search engine will be available to make accessibility of courses easier to the user. The search engine will receive user input and compare it with the list of courses to filter by keyword. Furthermore, the search engine will also be assisted by filters to further narrow down the list of courses to ones that the user desires. Possible filters to narrow down selections include subject, period, location, GPA, prerequisites, and grade requirements.
 
 ## Design
-The list of courses will be displayed across multiple pages and the number of courses displayed on each page could be determined by the user. As courses are viewed by the user and selected, rudimentary course information will be accessed through the database and mirroring information.
+The list of courses will be displayed across multiple pages and the number of courses displayed on each page can be determined by the user. As courses are viewed by the user and selected, rudimentary course information will be accessed through the database and mirroring information.
 
 ## QA
 The list of courses will be verified by ensuring every existing course appears on the list in addition to ensuring that the search engine and filters correctly isolate courses by keyword and other respective categories.
 
-# 2. Model Schedule
+# Model Schedule
 
 ## Functionality
 The model schedule is an empty schedule on the screen that has empty slots for each period. The term "Model Schedule" refers to the user interface displayed on the screen. The user interface for this should look like the interface for the empty schedule in the scheduler app last year (2020-2021). Courses can be dragged into and out of the slots on the model schedule. It will have spots for each period (0-8), but the 0, 1, and 8 period spots will be there for both A days and B days. Furthermore, there will be a a second interface for the second semester, to account for semester long classes.
 
 ## Design
-The model schedule will be class consisting of an array of 9 courses (to represent each period). This array will initially be empty. The index number corresponds to a period (index 0 is period 0, index 8 is period 8, etc.). As the user puts courses into their model schedule, this array will update and have a course in the period that the user specified. Each time a new course is put into the model schedule, there should be a check to make sure that the user isn't putting a course not available in that period (i.e. if physics is only available period 6 and period 3, and the user is attempting to place physics in period 2). If the check fails, then a warning message should pop up above the model schedule explaining that the user is attempting to place a course in a period that is invalid. There should be 2 model schedule classes for each year, one for the fall semester and one for the spring semester. When the user is finished, they will click on a "complete schedule" button. Upon clicking this, there should be a check to ensure that there are no class time conflicts, travel issues, or school time issues (the schedule should fulfill the minimum minutes per day requirement).
+The model schedule will be a class consisting of an array of 9 courses (to represent each period). This array will initially be empty. The index number corresponds to a period (index 0 is period 0, index 8 is period 8, etc.). As the user puts courses into their model schedule, this array will update and have a course in the period that the user specified. Each time a new course is put into the model schedule, there should be a check to make sure that the user isn't putting a course not available in that period (i.e. if physics is only available period 6 and period 3, and the user is attempting to place physics in period 2). If the check fails, then a warning message should pop up above the model schedule explaining that the user is attempting to place a course in a period that is invalid. There should be 2 model schedule classes for each year, one for the fall semester and one for the spring semester. When the user is finished, they will click on a "complete schedule" button. Upon clicking this, there should be a check to ensure that there are no class time conflicts, travel issues, or school time issues (the schedule should fulfill the minimum minutes per day requirement).
 
 ## QA
 The model schedule will be tested by ensuring that courses assigned by the user to its respective periods are updated in the user database as the user desires. Warnings should also appear and prevent the user from proceeding only if the combination of courses are truly invalid so that there are no false alarms or invalid schedules being marked as valid.
 
-# 3. Inputting Courses into Schedule
+# Inputting Courses into Schedule
 
 ## Functionality 
-what it is 
-provides the list of courses from the database and allows user to click on them to select them.
-Has a search bar to search for key words. The key words are used to sort through the list of all the classes. 
-stores the selected courses in the user's list of selected courses. The user can use the list of selected courses to 
-drag and drop them in the model schedule.
+The feature provides the list of courses from the database and allows the user to click on them to select them. It also includes the search bar to search for key words. The key words are used to sort through the list of all the classes. It stores the selected courses in the user's list of selected courses. The user can use the list of selected courses to drag and drop them in the model schedule.
 
 ## Design 
-There would be a data structure for the selected courses: a list because it doesn't need to be ordered. There would be a data structure for the schedule and that would be an array because it is ordered, and the indexes in the array would fit the class schedule (zero index -> zero period). It would be an optional array for class type course as there is the possibilty that a student does not have classes in certain periods such as zero period. Once they select a course from their selected courses, it will remove it from the list and copy it into the array. If they want to tske a class off the schedule, then they would have to click and drag it back: making the value in the array nil and adding it back into the list.
+There will be a data structure for the selected courses(a list because it doesn't need to be ordered). There will be a data structure for the schedule and that will be an array because it is ordered, and the indices in the array will fit the class schedule (zero index -> zero period). It will be an optional array for class type course as there is the possibilty that a student does not have classes in certain periods such as zero period. Once they select a course from their selected courses, it will remove it from the list and copy it into the array. If they want to take a class off the schedule, then they will have to click and drag it back. This will make the value in the array nil and add it back into the list.
 
 ## QA 
-User is able to put courses into the schedule and courses that have conflicts with other classes will be stopped. And only courses selected by the user will be displayed. Make sure that the courses will not disappear once another course has been selected for a fifth period. Their data should also be saved if they navigate away from the page.
+A user should be able to put courses into the schedule and courses that have conflicts with other classes should be stopped. Only courses selected by the user should be displayed. Make sure that the courses will not disappear once another course has been selected for a fifth period. Their data should also be saved if they navigate away from the page.
 
-# 4. Print/Email Schedule
+# Print/Email Schedule
 
 ## Functionality
-After creating a valid schedule, a user canopt to send a PDF version of the finalized schedule to a printer or a designated email address. The use can click one of the two sepaarate buttons for printing/emailing the schedule. The printer button should lead the uer to the printing interface that is used by the computer they are on, and it is pre-set to print a PDF of the schedule and the can make any changes to the printer settings and print the schedule. The emailing Button leads them to their Gmail acccount, if they are logged in the schedule is attached to an email and the user can input the email adress they want to send the schedule to. 
+After creating a valid schedule, a user can opt to send a PDF version of the finalized schedule to a printer or a designated email address. The use can click one of the two separate buttons for printing/emailing the schedule. The printer button should lead the user to the printing interface that is used by the computer they are on, and it is pre-set to print a PDF of the schedule and they can make any changes to the printer settings and print the schedule. The emailing button leads them to their Gmail acccount. If they are logged in, the schedule is attached to an email, and the user can input the email adress they want to send the schedule to. 
 
-Alternate Emailing option : After the user clicks the email button, they are able to input an email adress that the schedule will be sent to. The scheduling app sends an email with the PDF to the email specified. If it is unable to send , the schduling app displays a text box to the user that states  the schedule failed to be sent because the email adress was invalid. 
+Alternate Emailing option : After the user clicks the email button, they are able to input an email adress that the schedule will be sent to. The scheduling app sends an email with the PDF to the email specified. If it is unable to send, the schduling app displays a text box to the user that states  the schedule failed to be sent because the email adress was invalid. 
 
 ## Design
 
@@ -125,20 +121,11 @@ an alert is given notifying the user that the class could cause scheduling confl
 2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
 * Special classes will be indicated by a variable inside the object of the course, set to True or False
 * True indicates a special coyrse, while False indicates a regular one
-* Special courses would include STEAM / Lowery / Transportation-needed courses, Sports, Early/Late courses, band, etc
 * The program would check if the indicator is False or True before notifying the user about the special class
 3) Show descriptive text regarding the conflict
-* For example, for a late course, text would show regarding the fact that the course would last longer than a regular Allen high school course duration 
-> "Note: This course runs past the regular course duration"
-* Other possible warnings
-> "Note: This course is at an alternate location, which may cause scheduling issues"
-> "Note: This course runs on a different schedule [Dual credit, STEAM, etc] which may cause scheduling issues"
-> "Note: This course requires you to arrive earlier in the morning than an average 0/1st period course"
-* This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
-When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary. 
-Also, we need to determine that these notifications are specific to special courses solely, not normal courses, so some normal courses should be included while testing. 
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. 
 
 # 1. Elaborated Course Description
 
@@ -167,14 +154,9 @@ Filters the periods through an array for every type of class.
 
 # 3 Step Process for Scheduling
 
-## Functionality
-
-## Design
-
-## QA
-
-## Functionality
+## Functionality 
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
+
 ## Design
 
 ## QA
