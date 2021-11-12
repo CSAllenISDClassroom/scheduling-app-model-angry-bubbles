@@ -174,7 +174,12 @@ There will be functionality for the users to specify which grade level they are 
 1. First step: The first step would allow users to select their courses from a list of all available courses. There will be a limit of twenty courses.The screen will be split up into sections with the left section, titled "Available Courses", containing a list of all available course with a search bar to locate courses with a filter to specify and the right section, titled "Selected Courses", containing the user selected courses. The course name itself will be shown on the left and the code will be shown on the right. There will be an icon available at the top of each section to provide information to the user upon being hovered over. The information will consist of details about what each section is about and how and what they should be doing in each section.
 2. Second step: 
 3.
-
+## Design
+1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
+## QA
+For each step, there will be a series of checks done to ensure that the user is completing their schedule with the correct amount of courses 
+## Functionality
+Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design
 1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
 
@@ -186,6 +191,8 @@ There will be functionality for the users to specify which grade level they are 
 A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information. At the very top of the page of the scheduler therre will be a bar that has buttons that allow the user to go to navigate to different parts of the scheduler: the list of courses for course selction, the current scehdule being built, and the final schedule along with other previously saved schedules and the option to save the scheudle as a PDF or email it. The navigation bar is available on all pages allowing the user to navigate back and forth. 
 
 ## Design
+
+The navigation bar could be reperesented using a class that has three seperate functions that render the objects that make up each of the three pages. Each of the three functions repond to the click of the user's mouse by calling the function associated with the button clicked. 
 Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
 
 ## QA 
@@ -197,3 +204,20 @@ Multiple tabs will be displayed at the top of the page and each tab will act as 
 ## Design
 
 ## QA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
