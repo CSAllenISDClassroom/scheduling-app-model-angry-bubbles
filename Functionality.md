@@ -132,7 +132,6 @@ When a user requests further information on a course, a pop up window will be di
 The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
-<<<<<<< HEAD
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods.
 
@@ -152,23 +151,6 @@ Filters the periods through an array for every type of class.
 ## Design
 
 ## QA
-=======
-## Functionality \
-Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
-## Design \
-
-## QA \
-
-# Navigation Bar
-
-## Functionality 
-A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
-## Design
-
-## QA 
-
-# Create Alternate Schedule
->>>>>>> 4a1f31a14c2d8074cd01e63e589b9429914e8690
 
 ## Functionality
 
