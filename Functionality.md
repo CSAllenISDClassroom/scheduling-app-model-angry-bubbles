@@ -137,7 +137,8 @@ an alert is given notifying the user that the class could cause scheduling confl
 * This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
-When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. 
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary. 
+Also, we need to determine that these notifications are specific to special courses solely, not normal courses, so some normal courses should be included while testing. 
 
 # 1. Elaborated Course Description
 
