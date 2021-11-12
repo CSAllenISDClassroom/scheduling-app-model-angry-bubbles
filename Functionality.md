@@ -113,6 +113,7 @@ There would be a dictionary where the key is the name of the resource and the va
 
 ## QA
 The links to the resource offered would have to be verified in order to make sure that they take the users to their intended resource location. 
+
 # 4. Notification for special classes (band, soccer, etc.)
 
 ## Functionality
@@ -124,8 +125,16 @@ an alert is given notifying the user that the class could cause scheduling confl
 2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
 * Special classes will be indicated by a variable inside the object of the course, set to True or False
 * True indicates a special coyrse, while False indicates a regular one
+* Special courses would include STEAM / Lowery / Transportation-needed courses, Sports, Early/Late courses, band, etc
 * The program would check if the indicator is False or True before notifying the user about the special class
 3) Show descriptive text regarding the conflict
+* For example, for a late course, text would show regarding the fact that the course would last longer than a regular Allen high school course duration 
+> "Note: This course runs past the regular course duration"
+* Other possible warnings
+> "Note: This course is at an alternate location, which may cause scheduling issues"
+> "Note: This course runs on a different schedule [Dual credit, STEAM, etc] which may cause scheduling issues"
+> "Note: This course requires you to arrive earlier in the morning than an average 0/1st period course"
+* This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
 When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. 
@@ -134,10 +143,13 @@ When the user selects any course from the list that has been predetermined to be
 
 ## Functionality
 User request will be received and information pertaining to a course that the user specified will be displayed to the user. Displayed information may elaborate beyond its name by including available periods, locations, subject type, and level of rigor. If necessary, external links and forms can be included for courses with special prerequisites.
+
 ## Design
 When a user requests further information on a course, a pop up window will be displayed so that the user information can be read alongside other courses and the model scheduler.
+
 ## QA
 The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
+
 # 2. Filter for Courses
 
 ## Functionality
