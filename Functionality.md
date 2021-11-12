@@ -59,13 +59,13 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 
 ## QA
 
-
 # 1. Help Ticket Button
 
 ## Functionality
 The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
 
 ## Design
+
 
 ## QA
 
@@ -86,13 +86,14 @@ until the conflict is resolved.\
 It would have multiple checks before they can proceed to the final section where they print/submit their schedule. These checks would include making sure they have enough academic minutes for A day and B day, making sure STEAM and Dual Credit classes don't overlap, making sure that priviledge period is not during 3rd or 6th period, and that not more than 3 privledge periods are selected. And making sure that they have at least one privledge period and one extra if they have a zero period. Functions for checking a schedule for its validity.
 
 ## QA
-
+Quality assurance for this feature would come from the user being notified if there is a conflict with the placement of their courses in a specific place in their schedule via the red text that would pop to alert them as well as a function that would prevent them from adding that course to their schedule in the first place.
 # 2. Bug Report
 
 ## Functionality \
 The bug report function: There's a button that users can click on to report a bug. Upon clicking the button, they're brought to a new page. On the page there will be 3 text boxes. In one they'll state how they got to the bug. In another text box they'll explain what the problem that they're experiencing is. In the 3rd text box, they'll leave their email if we may need to contact them for further information or if their bug was handled or not.
 
 ## Design \
+The bug report button will lead to a google form where users can report bugs. The front end will program a button with the link to our bugs google form.
 
 ## QA
 
@@ -105,8 +106,13 @@ Page that includes a list of resources for arena scheduling. This includes (but 
 There would be a dictionary where the key is the name of the resource and the value is the resource itself which will be linked on the website.
 
 ## QA
+<<<<<<< HEAD
 
 # 4. Notification for special courses (band, soccer, etc.)
+=======
+The links to the resource offered would have to be verified in order to make sure that they take the users to their intended resource location. 
+# 4. Notification for special classes (band, soccer, etc.)
+>>>>>>> 8263fa0caad036fa648402b5c6e87648fe65ad32
 
 ## Functionality
 If the user selects a'special' course, designated based on potiential conflicts that it may have, (campus conflicts - steam, CTC, AHS and LFC,timings for the course start early or stay late,extracurriculars like band,sports and orchestra)
@@ -133,7 +139,6 @@ When a user requests further information on a course, a pop up window will be di
 The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
-<<<<<<< HEAD
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods.
 
@@ -153,6 +158,7 @@ Filters the periods through an array for every type of class.
 ## Design
 
 ## QA
+<<<<<<< HEAD
 =======
 ## Functionality \
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
@@ -169,10 +175,11 @@ A navigation bar will allow users to access easily access resources and tools fo
 ## QA 
 
 # Create Alternate Schedule
->>>>>>> 4a1f31a14c2d8074cd01e63e589b9429914e8690
 
 ## Functionality
 
 ## Design
 
 ## QA
+=======
+>>>>>>> 6a3c2adbd1263fce2770c8512c4870aa89a5bd20
