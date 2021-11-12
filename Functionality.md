@@ -65,6 +65,7 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 ## QA
 The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email.
 
+
 # 1. Help Ticket Button
 
 ## Functionality
@@ -98,7 +99,7 @@ Quality assurance for this feature would come from the user being notified if th
 ## Functionality
 The bug report function: There's a button that users can click on to report a bug. Upon clicking the button, they're brought to a new page. On the page there will be 3 text boxes. In one they'll state how they got to the bug. In another text box they'll explain what the problem that they're experiencing is. In the 3rd text box, they'll leave their email if we may need to contact them for further information or if their bug was handled or not.
 
-## Design \
+## Design
 The bug report button will lead to a google form where users can report bugs. The front end will program a button with the link to our bugs google form.
 
 ## QA
@@ -137,7 +138,8 @@ an alert is given notifying the user that the class could cause scheduling confl
 * This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
-When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. 
+When the user selects any course from the list that has been predetermined to be a 'special' class, if the course they selected changes its initial color to red and the descriptive text appears the Notification is successful. This process should be repeated and tested for every special course to determine if the notifications are working and displaying properly; If not, debugging or fixing code will probably be neccessary. 
+Also, we need to determine that these notifications are specific to special courses solely, not normal courses, so some normal courses should be included while testing. 
 
 # 1. Elaborated Course Description
 
@@ -164,12 +166,25 @@ Filters the periods through an array for every type of class.
 
 ## QA
 
-# 3 Step Process for Scheduling
 
+# Landing Page
 ## Functionality
+There will be functionality for the users to specify which grade level they are in to streamline their course selction process.
 
 ## Design
 
+
+## QA
+
+
+# 3 Step Process for Scheduling
+
+## Functionality
+1. First step: The first step would allow users to select their courses from a list of all available courses. There will be a limit of twenty courses.The screen will be split up into sections with the left section, titled "Available Courses", containing a list of all available course with a search bar to locate courses with a filter to specify and the right section, titled "Selected Courses", containing the user selected courses. The course name itself will be shown on the left and the code will be shown on the right. There will be an icon available at the top of each section to provide information to the user upon being hovered over. The information will consist of details about what each section is about and how and what they should be doing in each section.
+2. Second step: 
+3.
+## Design
+1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
 ## QA
 
 ## Functionality
