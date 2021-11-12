@@ -160,17 +160,9 @@ Filters the periods through an array for every type of class.
 
 ## QA
 
-<<<<<<< HEAD
-
-## Functionality \
-Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
-
-## Design \
-=======
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design
->>>>>>> 86a4a65bbe646aa2bf4e759612632dce13fbb777
 
 ## QA
 
