@@ -203,9 +203,8 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information. At the very top of the page of the scheduler therre will be a bar that has buttons that allow the user to go to navigate to different parts of the scheduler: the list of courses for course selction, the current scehdule being built, and the final schedule along with other previously saved schedules and the option to save the scheudle as a PDF or email it. The navigation bar is available on all pages allowing the user to navigate back and forth. 
 
 ## Design
-<<<<<<< HEAD
+
 The navigation bar could be reperesented using a class that has three seperate functions that render the objects that make up each of the three pages. Each of the three functions repond to the click of the user's mouse by calling the function associated with the button clicked. 
-=======
 Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
 >>>>>>> 03e7f3c54c14496ceb8eb145274ca2497f831c39
 
@@ -219,3 +218,20 @@ Multiple tabs will be displayed at the top of the page and each tab will act as 
 ## Design
 
 ## QA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
