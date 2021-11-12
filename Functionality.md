@@ -59,13 +59,13 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 
 ## QA
 
-
 # 1. Help Ticket Button
 
 ## Functionality
 The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
 
 ## Design
+
 
 ## QA
 
@@ -93,6 +93,7 @@ Quality assurance for this feature would come from the user being notified if th
 The bug report function: There's a button that users can click on to report a bug. Upon clicking the button, they're brought to a new page. On the page there will be 3 text boxes. In one they'll state how they got to the bug. In another text box they'll explain what the problem that they're experiencing is. In the 3rd text box, they'll leave their email if we may need to contact them for further information or if their bug was handled or not.
 
 ## Design \
+The bug report button will lead to a google form where users can report bugs. The front end will program a button with the link to our bugs google form.
 
 ## QA
 
@@ -150,6 +151,7 @@ Filters the periods through an array for every type of class.
 ## Design
 
 ## QA
+<<<<<<< HEAD
 =======
 ## Functionality \
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
@@ -172,3 +174,5 @@ A navigation bar will allow users to access easily access resources and tools fo
 ## Design
 
 ## QA
+=======
+>>>>>>> 6a3c2adbd1263fce2770c8512c4870aa89a5bd20
