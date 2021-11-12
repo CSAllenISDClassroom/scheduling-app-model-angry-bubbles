@@ -2,10 +2,12 @@
 
 ## Functionality
 Every possible course will be listed initially, but a search engine will be available to make accessibility of courses more easier by the user. The search engine will receive user input and compare it with the list of courses to filter by keyword. Furthermore, the search engine will also be assisted by filters to further narrow down the list of courses to ones that the user desires. Possible filters to narrow down selections include subject, period, location, GPA, prerequisites, and grade requirements.
+
 ## Design
 
 ## QA
 The list of courses will be verified by ensuring every existing course appears on the list in addition to ensuring that the search engine and filters correctly isolate courses by keyword and other respective categories.
+
 # 2. Model Schedule
 
 ## Functionality
@@ -30,6 +32,7 @@ There would be a data structure for the selected courses: a list because it does
 
 ## QA 
 User is able to put courses into the schedule and courses that have conflicts with other classes will be stopped. And only courses selected by the user will be displayed. Make sure that the courses will not disappear once another course has been selected for a fifth period. Their data should also be saved if they navigate away from the page.
+
 # 4. Print/Email Schedule
 
 ## Functionality
@@ -131,7 +134,6 @@ When a user requests further information on a course, a pop up window will be di
 The information pop up window will have to be checked and ensured to be accurate to the school's definitions of the course description.
 # 2. Filter for Courses
 
-<<<<<<< HEAD
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods.
 
@@ -151,9 +153,11 @@ Filters the periods through an array for every type of class.
 ## Design
 
 ## QA
-=======
+
+
 ## Functionality \
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
+
 ## Design \
 
 ## QA \
@@ -162,12 +166,12 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 
 ## Functionality 
 A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
+
 ## Design
 
 ## QA 
 
 # Create Alternate Schedule
->>>>>>> 4a1f31a14c2d8074cd01e63e589b9429914e8690
 
 ## Functionality
 
