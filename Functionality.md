@@ -114,8 +114,16 @@ If the user selects a designated 'special' class, an alert is given notifying th
 2) If said class is a predetermined 'special class' [designated as such due to possible scheduling conflicts] change change color of text of class to red
 * Special classes will be indicated by a variable inside the object of the course, set to True or False
 * True indicates a special coyrse, while False indicates a regular one
+* Special courses would include STEAM / Lowery / Transportation-needed courses, Sports, Early/Late courses, band, etc
 * The program would check if the indicator is False or True before notifying the user about the special class
 3) Show descriptive text regarding the conflict
+* For example, for a late course, text would show regarding the fact that the course would last longer than a regular Allen high school course duration 
+> "Note: This course runs past the regular course duration"
+* Other possible warnings
+> "Note: This course is at an alternate location, which may cause scheduling issues"
+> "Note: This course runs on a different schedule [Dual credit, STEAM, etc] which may cause scheduling issues"
+> "Note: This course requires you to arrive earlier in the morning than an average 0/1st period course"
+* This small note will persist during scheduling as a reminder of the course's status
 
 ## QA
 
