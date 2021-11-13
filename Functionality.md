@@ -234,6 +234,7 @@ The saving of schedules will be test by ensuring user data remains the same as l
 ## Functionality
 There will be an option to assign courses on an A day and B day with time intervals of periods taken into consideration for the user to consider when creating a schedule.
 ## Design
-Two separate columns will exist to distinguish A days and B days on the model schedule.
+Two separate columns will exist to distinguish A days and B days on the model schedule. There will also be a button available to the user to hover over and click in order to swicth between A day and B day.
+
 ## QA
 The A day and B day selection will be tested by ensuring periods 2, 3, and 4 are on A days and that periods 5, 7, and 7 are on B days with proper time intervals depending on the course.
