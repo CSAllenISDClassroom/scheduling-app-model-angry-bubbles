@@ -161,12 +161,9 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 ## Design
 String Course Difficulty
 The difficulty would be a changing property in the courses like IB, AP, Adv., and On-level.
-
-let Period = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-Filters the periods through an array for every type of class.
-
+ 
 ## QA
-
+Make sure the dropdown menu is accessible and visible at all times. Make sure that all the sections for the courses are available. Once they click on a section then a list of courses should show in the Available Courses section. WHen they choose a filter for AP then it should show only the AP classes that are currently available(Same for On-level, IB, and Adv.). When 2 filters are chosen like Math and Adv. then it should only be showing Adv. Math class choices and nothing higher or lower.
 
 # Landing Page
 ## Functionality
@@ -188,6 +185,7 @@ There will be functionality for the users to specify which grade level they are 
 1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
 ## QA
 For each step, there will be a series of checks done to ensure that the user is completing their schedule with the correct amount of courses 
+
 ## Functionality
 Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
 ## Design
@@ -203,9 +201,9 @@ A navigation bar will allow users to access easily access resources and tools fo
 
 The navigation bar could be reperesented using a class that has three seperate functions that render the objects that make up each of the three pages. Each of the three functions repond to the click of the user's mouse by calling the function associated with the button clicked. 
 Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
->>>>>>> 5b7fd14934bef2c3e499f5738a3539c3081a767a
 
 ## QA 
+The bar will have to be accessible from all pages and display the correct features under the correct tabs for the user to access resources and navigation through pages.
 
 # Create Alternate Schedule
 
