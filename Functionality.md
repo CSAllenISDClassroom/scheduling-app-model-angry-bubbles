@@ -221,12 +221,14 @@ Multiple tabs will be displayed at the top of the page and each tab will act as 
 # Saving Schedules Made
 
 ## Functionality
-
+the funcitonality for saving a schedule rests primarily within the review step of the scheduling process for the user as its purpose is to ensure that the user saves their work so that the project will not have to deal with the issue of having to save mass amounts of data for the users. However, the robust options within this function allow the user to save, print, email, or export their work onto Drive or whatever platform they wish to use. 
 ## Design
+At the end of the Review process when the user is satisfied with the schedule that they have created, they will be presented with the option of savin g their work by emailing it, printing it, and by exporting it to their desired platforms. These selections will be presented within a screen that with allow them to select their option by clicking their choice out a series of tabs that would allow them to use the functionality of this feature.
 
 ## QA
-
+There would be a process in place to see if the user's choice is compatible with the process of saving their schedules. There would also be the consideration of making sure that the user's schedules would be saved throughout their session creating schedules.
 # Select A/B Day 
+
 ## Functionality
 
 ## Design
