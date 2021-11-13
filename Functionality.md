@@ -63,18 +63,19 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 * From this point forward the user can deignate someone to send to or edit the email as desired 
 
 ## QA
-The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email.
+The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email. To ensure that the final schedule is successfully converting into a pdf with the use of the print button, the user can create a schedule and click the button that allows them to download it as a PDF. If a PDF is downloaded to the desktop and successfuly opens rendering the PDF version of the schedule, the PDF button is successfully working.
 
 
-# 1. Help Ticket Button
+# 1. Help Ticket
 
 ## Functionality
-The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
+The help ticket will be featured as a way for users to ask any questions or issues they may encounter when creating a schedule. The help ticket will have various questions to narrow down the issue or question for a counselor to easily and quickly respond to the requests.
 
 ## Design
-Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
+The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email. Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
 
 ## QA
+We will ensure the the button leads to the correct google form link and properly sends a user's request to a counselor or guidance figure. Furthermore, the help ticket button must be accessible from all pages. When the button is clicked, make sure that it links to the correct Google form. Make sure that the button is visible for those that need help.
 
 # 3. Warning upon creation of invalid schedule
 
@@ -166,7 +167,7 @@ let Period = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 Filters the periods through an array for every type of class.
 
 ## QA
-
+Filters will be checked by ensuring that the correct courses appear based off of the chosen category with the correct information and names of courses shown.
 
 # Landing Page
 ## Functionality
@@ -189,12 +190,6 @@ There will be functionality for the users to specify which grade level they are 
 ## QA
 For each step, there will be a series of checks done to ensure that the user is completing their schedule with the correct amount of courses 
 
-## Functionality
-Users will be able to open a dropdown menu, next to the search bar, in which there will be the following terms: Math, English, Science, Social Studies, Fine arts, Athletics, Electives, AP, Advanced, On-level, Steam, Dual Credit, Filter by difficulty, and filter by periods. 
-## Design
-
-## QA
-
 # Navigation Bar
 
 ## Functionality 
@@ -211,18 +206,23 @@ The bar will have to be accessible from all pages and display the correct featur
 # Create Alternate Schedule
 
 ## Functionality
+In addition to the main model schedule created by the user, the user will have the option to create a secondary, or backup schedule in the situation where course slots for one or all periods run out. When creating the alternate schedule, the main schedule can be copied over for modification and swapping of courses into different periods.
 
 ## Design
+The design will mirror that of the model scheduler of the main schedule, but courses or periods will be marked as alternates to distinguish with the main schedule.
 
 ## QA
+The alternate schedule will be tested by ensuring that it is separate from the main schedule with the placement of courses not encountering time conflicts.
 
 # Saving Schedules Made
-
 ## Functionality
+Once a valid schedule is constructed by the user, the user will be given the choice to save and store it for later reference and viewing.
 
 ## Design
+Saving schedules will be done by storing the completed schedules in the database, identified by an id. The user will have access by signing into an account in a login page and a list of stored schedules will be shown to the user if any saved schedules are available for viewing.
 
 ## QA
+The saving of schedules will be test by ensuring user data remains the same as long as it is saved, is separate from other user's schedules, and by ensuring continued access until the user would like to delete the schedule.
 
 # Select A/B Day 
 ## Functionality
