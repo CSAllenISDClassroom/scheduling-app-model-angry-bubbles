@@ -183,10 +183,12 @@ There will be functionality for the users to specify which grade level they are 
 
 ## Functionality
 1. First step: The first step would allow users to select their courses from a list of all available courses. There will be a limit of twenty courses.The screen will be split up into sections with the left section, titled "Available Courses", containing a list of all available course with a search bar to locate courses with a filter to specify and the right section, titled "Selected Courses", containing the user selected courses. The course name itself will be shown on the left and the code will be shown on the right. There will be an icon available at the top of each section to provide information to the user upon being hovered over. The information will consist of details about what each section is about and how and what they should be doing in each section.
-2. Second step: 
-3.
+2. Second step: The second step involves the process of selecting course for the Fall Semester for the AHS, LFC, and Steam Center campuses. There are also two sections with one section being the bell schedule for the AHS/LFC campuses on the left with the Steam Center on the right section. The user is able to attempt multiple times to insert their selected courses from the first step into specific periods dependent on the periods that a specifc course will be offered. The user will also have the ability to switch between viewing a A day alone and a B day alone to make their scheduling period more facile.This step also includes inputting courses into the Spring semester of their upcoming school year with the same functionality offered as the Fall semster.
+3.Third Step: The third step involved Reviewing the finished schedule for the user. The user will be able to view all of their courses in their specificed periods on their schedule. They will be provided the option to create another alternate scheudle as well if they choose to have another version. A significant functionality, which is also another feature, that is offered within this step would be the user's ability to save/export their schedule(s) that they have made.
 ## Design
 1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
+2. Second Step: The now has created an array of possible courses out of their selections in the first step. As a result, they will be able to use the values in that array to create a new schedule by mapping their specific course values to the periods within their schedules which would act the keys in a dictionary as they would be creating values to fill out their schedule. Apart from the potential data structures for this feature, there will also be a button for the users to hover and click to change their schedule to show only A day periods or B day periods. 
+3. third Step: the review step would have a completed schedule for the users to view and decide if they want to keep their schedule or discard it to start over. It will also include an option to make another alternate schedule while keeping the schedule(s) that the user has already made. If the user wishes to end their scheduling process,then they will be presented with a screen that has them save, print, or export their schedules.
 ## QA
 For each step, there will be a series of checks done to ensure that the user is completing their schedule with the correct amount of courses 
 
@@ -199,9 +201,9 @@ A navigation bar will allow users to access easily access resources and tools fo
 
 The navigation bar could be reperesented using a class that has three seperate functions that render the objects that make up each of the three pages. Each of the three functions repond to the click of the user's mouse by calling the function associated with the button clicked. 
 Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
+>>>>>>> 5b7fd14934bef2c3e499f5738a3539c3081a767a
 
 ## QA 
-The bar will have to be accessible from all pages and display the correct features under the correct tabs for the user to access resources and navigation through pages.
 
 # Create Alternate Schedule
 
