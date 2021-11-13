@@ -201,9 +201,9 @@ A navigation bar will allow users to access easily access resources and tools fo
 
 The navigation bar could be reperesented using a class that has three seperate functions that render the objects that make up each of the three pages. Each of the three functions repond to the click of the user's mouse by calling the function associated with the button clicked. 
 Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
->>>>>>> 5b7fd14934bef2c3e499f5738a3539c3081a767a
 
 ## QA 
+The navigation bar will be tested by insuring that the tabs and feature tabs lead to the correct page or resource requested by the user.
 
 # Create Alternate Schedule
 
@@ -228,7 +228,8 @@ The saving of schedules will be test by ensuring user data remains the same as l
 
 # Select A/B Day 
 ## Functionality
-
+There will be an option to assign courses on an A day and B day with time intervals of periods taken into consideration for the user to consider when creating a schedule.
 ## Design
-
+Two separate columns will exist to distinguish A days and B days on the model schedule.
 ## QA
+The A day and B day selection will be tested by ensuring periods 2, 3, and 4 are on A days and that periods 5, 7, and 7 are on B days with proper time intervals depending on the course.
