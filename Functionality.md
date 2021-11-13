@@ -174,10 +174,10 @@ Filters will be checked by ensuring that the correct courses appear based off of
 There will be functionality for the users to specify which grade level they are in to streamline their course selection process. Upon arriving to the scheduler app, the screen will display a welcome text and there will be a drop down menu for the user to select their grade level for the incoming school year (e.g. 2022-2023). After selecting this, the screen will display the course selection page (first step of the 3 step process). 
 
 ## Design
-There will be html text that says "Welcome to the 2022-2023 scheduler app! Please select your grade level below." Then there will be a dropdown menu with the options 9, 10, 11, or 12. When the user selects an option, the system will save what option they picked into cache or cookies. The model schedule will change based on their grade level (freshman will have the Lowery Freshman Center model schedule (with the main campus sche and all other grade levels will 
-
+There will be html text that says "Welcome to the 2022-2023 scheduler app! Please select your grade level below." Then there will be a dropdown menu with the options 9, 10, 11, or 12. When the user selects an option, the system will save what option they picked into cache or cookies. The model schedule will change based on their grade level (freshman will have the Lowery Freshman Center model schedule). Grades 10-12 will have the main campus schedule.
 
 ## QA
+Errors can be avoided in this feature by ensuring that the correct model schedule is matched with each grade. The Lowery Model Schedule should only be used by 9th graders.
 
 
 # 3 Step Process for Scheduling
