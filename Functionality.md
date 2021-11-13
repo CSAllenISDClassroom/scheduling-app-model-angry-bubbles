@@ -217,5 +217,15 @@ Multiple tabs will be displayed at the top of the page and each tab will act as 
 
 # Saving Schedules Made
 
-# Select A/B
-Day 
+## Functionality
+
+## Design
+
+## QA
+
+# Select A/B Day 
+## Functionality
+
+## Design
+
+## QA
