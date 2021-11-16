@@ -13,6 +13,8 @@
 * Viewing main branch problems
 
 ## 2.Feature Flag Branching Strategy for Continuous Delivery
+The Feuture Flag branching strategy is essentially organizes the branches separated from the 
+trunk branch (the master branch)by 
 ### Pros:
 ### Cons:
 
