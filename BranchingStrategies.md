@@ -40,5 +40,16 @@ This branching strategy involves creating a branch for every new release that a 
 
 https://www.perforce.com/blog/vcs/best-branching-strategies-high-velocity-development
 
+
+
 Rules for adding features, resolving bugs, and managing releases: 
+
+Adding features : 
+For our branching strategy we will create a development branch that everyone has access to. For each feature we will be creating an additional branch from the
+
+
+
+
+
+
 
