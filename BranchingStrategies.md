@@ -39,3 +39,6 @@ This branching strategy involves creating a branch for every new release that a 
 * bugfixes have to be propagated, merged, and tested with a clearly outlined process to maintain all the release versions
 
 https://www.perforce.com/blog/vcs/best-branching-strategies-high-velocity-development
+
+Rules for adding features, resolving bugs, and managing releases: 
+
