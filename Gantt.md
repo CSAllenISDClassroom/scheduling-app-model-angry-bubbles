@@ -1,2 +1,2 @@
 # Link to Gantt Chart
-https://app.clickup.com/36038303/v/l/s/54091992
+https://docs.google.com/spreadsheets/d/1WeizuPksYcXNrFvEyD3foJiP9dZkB1mtgUL1VvIgEgg/edit#gid=204681084
