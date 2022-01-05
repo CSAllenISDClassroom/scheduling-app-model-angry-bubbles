@@ -45,13 +45,11 @@ https://www.perforce.com/blog/vcs/best-branching-strategies-high-velocity-develo
 Rules for adding features, resolving bugs, and managing releases: 
 
 Adding features : 
-For our branching strategy we will create a development branch that everyone has access to. 
-We eill be separating into two groups where each group will be working on a feauture.
-For each feature we will be creating an additional branch from the development branch
-After each feauture is complete, and all the bugs have been resolved, the feature can be pushed to 
-the development branch.
-After both groups have pushed the feature they worked on to the development branch we will 
-resolve any bugs and merge conflicts 
+For our branching strategy we will create a development branch from the main branch that everyone has access to. 
+We will be separating into two groups where each group will be working on a specific feauture at a time.
+For each feature we will be creating an additional branch from the development branch that we will work on until the feature is complpete.
+After each feature is completed from both of the groups we will push the features to.
+resolve any bugs and merge conflicts that existist in the develpoment branch. 
 After there are no bugs and merge conflicts in the development branch, we will push it to the main branch.
 
 
