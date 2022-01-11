@@ -66,17 +66,17 @@ Alternate Emailing option : After the user clicks the email button, they are abl
 The printing and emailing feature will be tested by ensuring that the created schedule can be converted to a table in the PDF format and can be sent to a local network printer or to an email. To ensure that the final schedule is successfully converting into a pdf with the use of the print button, the user can create a schedule and click the button that allows them to download it as a PDF. If a PDF is downloaded to the desktop and successfuly opens rendering the PDF version of the schedule, the PDF button is successfully working.
 
 
-# 1. Help Ticket
+# 1. Help Ticket Button
 
 ## Functionality
-The help ticket will be featured as a way for users to ask any questions or issues they may encounter when creating a schedule. The help ticket will have various questions to narrow down the issue or question for a counselor to easily and quickly respond to the requests.
+The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email.
 
 ## Design
 The help ticket button is a button that will be located at the bottom left of the screen in the scheduler. This button will send them to a google form once it is selected. This google form will allow them to input their problem into a textbox. This can be submitted which will send out the inquiry within the textbox to a proper email. Depending on what we use to create the front end, we will use the appropiate language and create a button that holds the link to the help ticket google form. The button will be placed at the end of the navbar to be easily accesible. It will be labeled "NEED HELP?".
 
 ## QA
 We will ensure the the button leads to the correct google form link and properly sends a user's request to a counselor or guidance figure. Furthermore, the help ticket button must be accessible from all pages. When the button is clicked, make sure that it links to the correct Google form. Make sure that the button is visible for those that need help.
-
+When the button is pressed, it should be sending the user to a google form. The help ticket button should be displayed on all pages. The button should take them to a google form where they can enter a help ticket.
 # 3. Warning upon creation of invalid schedule
 
 ## Functionality
@@ -162,16 +162,14 @@ Users will be able to open a dropdown menu, next to the search bar, in which the
 ## Design
 String Course Difficulty
 The difficulty would be a changing property in the courses like IB, AP, Adv., and On-level.
-
-let Period = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-Filters the periods through an array for every type of class.
-
+ 
 ## QA
-Filters will be checked by ensuring that the correct courses appear based off of the chosen category with the correct information and names of courses shown.
+Make sure the dropdown menu is accessible and visible at all times. Make sure that all the sections for the courses are available. Once they click on a section then a list of courses should show in the Available Courses section. WHen they choose a filter for AP then it should show only the AP classes that are currently available(Same for On-level, IB, and Adv.). When 2 filters are chosen like Math and Adv. then it should only be showing Adv. Math class choices and nothing higher or lower.
 
 # Landing Page
 ## Functionality
 There will be functionality for the users to specify which grade level they are in to streamline their course selection process. Upon arriving to the scheduler app, the screen will display a welcome text and there will be a drop down menu for the user to select their grade level for the incoming school year (e.g. 2022-2023). After selecting this, the screen will display the course selection page (first step of the 3 step process). 
+There will be functionality for the users to specify which grade level they are in to streamline their course selction process.
 
 ## Design
 There will be html text that says "Welcome to the 2022-2023 scheduler app! Please select your grade level below." Then there will be a dropdown menu with the options 9, 10, 11, or 12. When the user selects an option, the system will save what option they picked into cache or cookies. The model schedule will change based on their grade level (freshman will have the Lowery Freshman Center model schedule). Grades 10-12 will have the main campus schedule.
@@ -179,13 +177,13 @@ There will be html text that says "Welcome to the 2022-2023 scheduler app! Pleas
 ## QA
 Errors can be avoided in this feature by ensuring that the correct model schedule is matched with each grade. The Lowery Model Schedule should only be used by 9th graders.
 
-
 # 3 Step Process for Scheduling
 
 ## Functionality
 1. First step: The first step would allow users to select their courses from a list of all available courses. There will be a limit of twenty courses.The screen will be split up into sections with the left section, titled "Available Courses", containing a list of all available course with a search bar to locate courses with a filter to specify and the right section, titled "Selected Courses", containing the user selected courses. The course name itself will be shown on the left and the code will be shown on the right. There will be an icon available at the top of each section to provide information to the user upon being hovered over. The information will consist of details about what each section is about and how and what they should be doing in each section.
-2. Second step: The second step involves the process of selecting course for the Fall Semester for the AHS, LFC, and Steam Center campuses. There are also two sections with one section being the bell schedule for the AHS/LFC campuses on the left with the Steam Center on the right section. The user is able to attempt multiple times to insert their selected courses from the first step into specific periods dependent on the periods that a specifc course will be offered. The user will also have the ability to switch between viewing a A day alone and a B day alone to make their scheduling period more facile.This step also includes inputting courses into the Spring semester of their upcoming school year with the same functionality offered as the Fall semster.
+2. 2. Second step: The second step involves the process of selecting course for the Fall Semester for the AHS, LFC, and Steam Center campuses. There are also two sections with one section being the bell schedule for the AHS/LFC campuses on the left with the Steam Center on the right section. The user is able to attempt multiple times to insert their selected courses from the first step into specific periods dependent on the periods that a specifc course will be offered. The user will also have the ability to switch between viewing a A day alone and a B day alone to make their scheduling period more facile.This step also includes inputting courses into the Spring semester of their upcoming school year with the same functionality offered as the Fall semster.
 3.Third Step: The third step involved Reviewing the finished schedule for the user. The user will be able to view all of their courses in their specificed periods on their schedule. They will be provided the option to create another alternate scheudle as well if they choose to have another version. A significant functionality, which is also another feature, that is offered within this step would be the user's ability to save/export their schedule(s) that they have made.
+
 ## Design
 1. First Step: During the selection process itself, the user would have the option of hovering over the course name to get a pop up with information. The left section retreives the courses from the database and narrows it down by the search or the filter specified by the user. On the right section, there would be an array of all the seleted courses and the array would be appended to as the user selects each course. The help icon will be in the top right of each section and it will display information if the webpage detects that the user is hovering over the icon. 
 2. Second Step: The now has created an array of possible courses out of their selections in the first step. As a result, they will be able to use the values in that array to create a new schedule by mapping their specific course values to the periods within their schedules which would act the keys in a dictionary as they would be creating values to fill out their schedule. Apart from the potential data structures for this feature, there will also be a button for the users to hover and click to change their schedule to show only A day periods or B day periods. 
@@ -194,7 +192,6 @@ Errors can be avoided in this feature by ensuring that the correct model schedul
 For each step, there will be a series of checks done to ensure that the user is completing their schedule with the correct amount of courses 
 
 # Navigation Bar
-
 ## Functionality 
 A navigation bar will allow users to access easily access resources and tools for interfacing with the schedule builder. It serves as a way to organize items into tabs or categories for ease of access. As a result, users will be able to navigate between the module scheduler and list of courses for selection of courses without losing user information.
 
@@ -204,38 +201,31 @@ The navigation bar could be reperesented using a class that has three seperate f
 Multiple tabs will be displayed at the top of the page and each tab will act as a category to incorporate features with similar characteristics or related functions.
 
 ## QA 
-The navigation bar will be tested by insuring that the tabs and feature tabs lead to the correct page or resource requested by the user.
+The bar will have to be accessible from all pages and display the correct features under the correct tabs for the user to access resources and navigation through pages.
 
 # Create Alternate Schedule
 
 ## Functionality
 In addition to the main model schedule created by the user, the user will have the option to create a secondary, or backup schedule in the situation where course slots for one or all periods run out. When creating the alternate schedule, the main schedule can be copied over for modification and swapping of courses into different periods.
-
 ## Design
 The design will mirror that of the model scheduler of the main schedule, but courses or periods will be marked as alternates to distinguish with the main schedule.
-
 ## QA
 The alternate schedule will be tested by ensuring that it is separate from the main schedule with the placement of courses not encountering time conflicts.
-
 # Saving Schedules Made
+
 ## Functionality
 the funcitonality for saving a schedule rests primarily within the review step of the scheduling process for the user as its purpose is to ensure that the user saves their work so that the project will not have to deal with the issue of having to save mass amounts of data for the users. However, the robust options within this function allow the user to save, print, email, or export their work onto Drive or whatever platform they wish to use. 
 ## Design
 At the end of the Review process when the user is satisfied with the schedule that they have created, they will be presented with the option of savin g their work by emailing it, printing it, and by exporting it to their desired platforms. These selections will be presented within a screen that with allow them to select their option by clicking their choice out a series of tabs that would allow them to use the functionality of this feature.
 Saving schedules will be done by storing the completed schedules in the database, identified by an id. The user will have access by signing into an account in a login page and a list of stored schedules will be shown to the user if any saved schedules are available for viewing.
-
 ## QA
 There would be a process in place to see if the user's choice is compatible with the process of saving their schedules. There would also be the consideration of making sure that the user's schedules would be saved throughout their session creating schedules.
 Once a valid schedule is constructed by the user, the user will be given the choice to save and store it for later reference and viewing.
 The saving of schedules will be test by ensuring user data remains the same as long as it is saved, is separate from other user's schedules, and by ensuring continued access until the user would like to delete the schedule.
-
-
 # Select A/B Day 
-
 ## Functionality
 There will be an option to assign courses on an A day and B day with time intervals of periods taken into consideration for the user to consider when creating a schedule.
 ## Design
 Two separate columns will exist to distinguish A days and B days on the model schedule. There will also be a button available to the user to hover over and click in order to swicth between A day and B day.
-
 ## QA
 The A day and B day selection will be tested by ensuring periods 2, 3, and 4 are on A days and that periods 5, 7, and 7 are on B days with proper time intervals depending on the course.
