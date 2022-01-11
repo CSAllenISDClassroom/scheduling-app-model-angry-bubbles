@@ -3,7 +3,7 @@
 * The front-end developer is responsible for maintaining the visual aspect of the app design and providing features for the users to interact with on their interface.
 ### Backend Development
 * Have to ensure that any given tasks are completed by the deadline given
-* Proper naming conventions are utilized for functions and variables 
+* Proper naming conventions are utilized for functions and variables (i.e. camelcase) 
 * Code that is concise and accomadates for arbitrary values
 * Making proper indentations and block comments when necessary
 * Communicate any issues or developments to managers to maintain progress on the app
