@@ -22,5 +22,5 @@
 ## Anamika - 
    Release Manager - The release manager keeps track of release schedule, branches, stability, and merges before sent to QA.\
    Development Engineer (Back End)
-## Vaishnavi - not here yet
+## Vaishnavi - 
    Development Engineer (Back End)
