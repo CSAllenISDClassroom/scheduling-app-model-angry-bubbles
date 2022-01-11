@@ -1,5 +1,6 @@
 ## Overarching Goals
-* A back-end developer builds and maintains the technology that powers those components which, together, enable the user-facing side of the website to even exist in the first place. The front-end developer is responsible for maintaining the visual aspect of the app design and providing features for the users to interact with on their interface.
+* A back-end developer builds and maintains the technology that powers those components which, together, enable the user-facing side of the website to even exist in the first place. 
+* The front-end developer is responsible for maintaining the visual aspect of the app design and providing features for the users to interact with on their interface.
 ### Backend Development
 * Have to ensure that any given tasks are completed by the deadline given
 * Proper naming conventions are utilized for functions and variables 
