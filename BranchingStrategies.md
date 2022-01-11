@@ -42,17 +42,22 @@ https://www.perforce.com/blog/vcs/best-branching-strategies-high-velocity-develo
 
 
 
-Rules for adding features, resolving bugs, and managing releases: 
+## branching strategy documnetation
 
-Adding features : 
-For our branching strategy we will create a development branch from the main branch that everyone has access to. 
-We will be separating into two groups where each group will be working on a specific feauture at a time.
-For each feature we will be creating an additional branch from the development branch that we will work on until the feature is complpete.
-After each feature is completed from both of the groups we will push the features to.
-resolve any bugs and merge conflicts that existist in the develpoment branch. 
-After there are no bugs and merge conflicts in the development branch, we will push it to the main branch.
+### Branches:
+* Main Branch : The main branch or the trunk branch is where all other branches will merge and where the final releases will take place.
 
+### Feature Branch : 
+* A feature branch branches off the main branch.
+* It is created by the developers. (we are sepearating into two groups of developers) 
+* Each group creates a new branch for each feature they are working on.
+* Once each feature is complete the feature Branch is merged to the Quality assurance Branch 
 
+### QA/development Branch : 
+* This Branch is the Branch that every single feature Branch is merged to 
+* Merge confilcts from multiple feature branches are resolved in this branch 
+* Each Feature is tested and improved until approved by the Quality assurance manager
+* After a feature is approved it is pushed to the main branch.
 
 
 
