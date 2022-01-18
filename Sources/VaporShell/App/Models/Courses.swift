@@ -84,8 +84,13 @@ final public class Course: Model, Content{
 
     func setAvailability(availabilityBitmap : Int) -> [[Int]] {
         var periods = [[Int]]()
-
-
+        let binaryString = String(availabilityBitmap, radix: 2)
+        for char in binaryString.reversed() {
+            var currentClassPeriodCounter = 0
+            if char == 1 {
+                periods.append(currentClassPeriodCounter)
+            }
+        }
     }
 }
 
