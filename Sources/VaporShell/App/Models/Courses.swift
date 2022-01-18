@@ -18,25 +18,75 @@ import Fluent
 import FluentMySQLDriver
 
 /// This class provides the model for an Course
-final public class Course: Model, Content {
-    // Name of the table or collection.
-    public static let schema = "CourseSectionsView"
+final public class Course: Model, Content{
 
-    /// Unique identifier for this Employee.
-    @ID(custom: "code", generatedBy: .user)
-    public var id: String?
+    let courseData = CourseData()
+    private let semester : Int
+    private let courseLevel : String
+    private let availability : [[Int]]
     
-    /// Short Description of the course
-    @Field(key: "shortDescription")
-    public var shortDescription: String
-
-    @Field(key: "locationName")
-    public var location: String
-
-    @Field(key: "isApplication")
-    public var isApplication: Int
-
     // Creates a new, empty Employee.
-    public init() { }
+    public init(courseData: CourseData) {
+        self.semester = setSemester(semester: courseData.semester)
+        self.courseLevel = setCourseLevel(isAP:CourseData.isAP, isIB:CourseData.isIB, isPreAP:CourseData.isPreAP, isOnLevel:CourseData.isOnLevel, isDualCredit: CourseData.isDualCredit)
+        
+    }
+
+    private func setSemester(semester: String) -> Int {
+        return Int(semester.removeFirst())
+    }
+
+    /*
+    private func setCourseLevel() -> String {
+        let courseLevelArray = [CourseData.isOnLevel, CourseData.isDualCredit, CourseData.isPreAP, CourseData.isAP, CourseData.isIB]
+        var courseLevelString = ""
+        for courseLevel in 0..<courseLevelArray.count {
+            if courseLevelArray[courseLevel] == 1 {
+                switch courseLevel {
+                case 0:
+                    courseLevelString = "isOnLevel"
+                case 1:
+                    courseLevelString = "isDualCredit"
+                case 2:
+                    courseLevelString = "isPreAP"
+                case 3:
+                    courseLevelString = "isAP"
+                case 4:
+                    courseLevelString = "isIB"
+                default:
+                    courseLevelString = "There was an error retrieving the courseLevel"
+                }
+            }
+        }
+        return courseLevelString
+    }
+    
+     */
+
+    func setCourseLevel(isAP:Int, isIB:Int, isPreAP:Int, isOnLevel: Int, isDualCredit: Int) -> String {
+        let courseLevelArray = ["isAP" : CourseData.isAP,
+                                "isIB" : CourseData.isIB,
+                                "isOnLevel" : CourseData.isOnLevel,
+                                "isDualCredit" : CourseData.isDualCredit,
+                                "isPreAP" : CourseData.isPreAP]
+        if courseLevel["isAP"] == 1 {
+            return "isAP"
+        } else if courseLevel["isIB"] == 1 {
+            return "isIB"
+        } else if courseLevel["isOnLevel"] == 1 {
+            return "isOnLevel"
+        } else if courseLevel["isPreAP"] == 1 {
+            return "isPreAP"
+        } else if courseLevel["isDualCredit"] == 1 {
+            return "isDualCredit"
+        }
+    }
+
+    func setAvailability(availabilityBitmap : Int) -> [[Int]] {
+        var periods = [[Int]]()
+
+
+    }
 }
+
 

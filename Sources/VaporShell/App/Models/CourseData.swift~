@@ -18,14 +18,14 @@ import Fluent
 import FluentMySQLDriver
 
 /// This class provides the model for an Course
-final public class Course: Model, Content {
+final public class CourseData: Model{
     // Name of the table or collection.
     public static let schema = "CourseSectionsView"
 
-    /// Course code for each class
-    @Field(key: "code")
-    public var code: String
-
+    /// Unique identifier for this Employee.
+    @ID(custom: "code", generatedBy: .user)
+    public var id: String?
+    
     /// Short Description of the course
     @Field(key: "shortDescription")
     public var shortDescription: String
@@ -36,6 +36,28 @@ final public class Course: Model, Content {
     @Field(key: "isApplication")
     public var isApplication: Int
 
+    @Field(key: "isAP")
+    public var isApplication: Int
+
+    @Field(key: "isIB")
+    public var isApplication: Int
+
+    @Field(key: "isPreAP")
+    public var isApplication: Int
+
+    @Field(key: "isDualCredit")
+    public var isApplication: Int
+
+    @Field(key: "isOnLevel")
+    public var isApplication: Int
+
+    @Field(key: "semester")
+    public var isApplication: String
+
+    @Field(key: "availabilityBitmap")
+    public var isApplication: Int
+
+    
     // Creates a new, empty Employee.
     public init() { }
 }
