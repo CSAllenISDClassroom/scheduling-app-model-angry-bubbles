@@ -25,8 +25,8 @@ final public class Course: Model, Content{
     private let courseLevel : String
     private let availability : [[Int]]
     
-    // Creates a new, empty Employee.
-    public init(courseData: CourseData) {
+    // Initialize course data information
+    init(courseData: CourseData) {
         self.semester = setSemester(semester: courseData.semester)
         self.courseLevel = setCourseLevel(isAP:CourseData.isAP, isIB:CourseData.isIB, isPreAP:CourseData.isPreAP, isOnLevel:CourseData.isOnLevel, isDualCredit: CourseData.isDualCredit)
         
@@ -82,14 +82,43 @@ final public class Course: Model, Content{
         }
     }
 
+    // Accepting 9 bit value (0 - 511), to account for periods 0 - 8
     func setAvailability(availabilityBitmap : Int) -> [[Int]] {
         var periods = [[Int]]()
-        let binaryString = String(availabilityBitmap, radix: 2)
-        for char in binaryString.reversed() {
-            var currentClassPeriodCounter = 0
-            if char == 1 {
-                periods.append(currentClassPeriodCounter)
+        let binaryString = String(availabilityBitmap)
+        let binaryInt = Int(binaryString, radix: 2)
+        // for char in binaryString.reversed() {
+        //     var currentClassPeriodCounter = 0
+        //     if char == 1 {
+        //         periods.append(currentClassPeriodCounter)
+        //     }
+        // }
+
+        // Checking individual periods
+        var val = binaryInt
+        for period in 0 ... 8 {
+            if val & 1 == 1 {
+                periods.append([period])
             }
+            val >>= 1
+        }
+        
+        // Checking vertical blocked periods
+        var val = binaryInt
+        for period in 0 ..< 8 {
+            if val & 11 == 11 {
+                periods.append([period, period + 1])
+            }
+            val >>= 1
+        }
+            
+        // Checking horizontally blocked periods
+        var val = binaryInt
+        for period in 2 ... 4 {
+            if val & 1001 == 1001 {
+                periods.append([period, period + 3])
+            }
+            val >>= 1
         }
     }
 }
