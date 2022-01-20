@@ -18,6 +18,13 @@ public class CoursesController {
     /// Returns: ``Employee``
     /// 
     public func getCourseByCode(_ app: Application) throws {
+        app.get("courses") { req -> Page<Course> in
+            let coursesData = try await CourseData.query(on: req.db)
+              .paginate(for: req)
+            let courses = courseData.map{ Course(courseData : $0) }
+            return courses
+        }
+        
         app.get("courses", ":code") { req -> Course in
 
             guard let code = req.parameters.get("code", as: String.self) else {
