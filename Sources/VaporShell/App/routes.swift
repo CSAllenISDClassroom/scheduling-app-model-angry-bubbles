@@ -34,8 +34,9 @@ func routes(_ app: Application) throws {
     /// Paging is supported
     /// Endpoint URI: /employees
     app.get("courses") { req -> Page<Course>  in
-        let courses = try await Course.query(on: req.db)
+        let courseData = try await CourseData.query(on: req.db)
           .paginate(for: req)
+        let courses = try courseData.map{ try Course(courseData: $0) }
         return courses
     }
 

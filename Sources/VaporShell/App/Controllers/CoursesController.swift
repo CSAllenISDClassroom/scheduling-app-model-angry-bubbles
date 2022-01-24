@@ -21,7 +21,7 @@ public class CoursesController {
         app.get("courses") { req -> Page<Course> in
             let coursesData = try await CourseData.query(on: req.db)
               .paginate(for: req)
-            let courses = coursesData.map{ Course(courseData : $0) }
+            let courses = try coursesData.map{ try Course(courseData : $0) }
             return courses
         }
         
@@ -31,11 +31,14 @@ public class CoursesController {
                 throw Abort(.badRequest)
             }
 
-            guard let course = try await Course.query(on: req.db)
+            guard let courseData = try await CourseData.query(on: req.db)
                     .filter(\.$id == code)
                     .first() else {
                 throw Abort(.notFound)
             }
+            
+            let course = try Course(courseData: courseData)
+            
             return course
         }
     }

@@ -30,6 +30,9 @@ final public class CourseData: Model{
     @Field(key: "shortDescription")
     public var shortDescription: String
 
+    @Field(key: "description")
+    public var description: String
+
     @Field(key: "locationName")
     public var location: String
 
