@@ -17,51 +17,39 @@ import Vapor
 import Fluent
 import FluentMySQLDriver
 
-/// This class provides the model for an Course
+// This class provides the model for a Course
 final public class CourseData: Model{
     // Name of the table or collection.
-    public static let schema = "CourseSectionsView"
+    public static let schema = "Courses"
 
-    /// Unique identifier for this Employee.
-    @ID(custom: "code", generatedBy: .user)
+    // Unique identifier for Courses.
+    @ID(custom: "courseCode", generatedBy: .user)
     public var id: String?
-    
-    /// Short Description of the course
+
+    @Field(key: "semesterLength")
+    public var semesterLength: String
+
+    @Field(key: "semester")
+    public var semester: String
+
+    // Short Description of the course
     @Field(key: "shortDescription")
     public var shortDescription: String
 
     @Field(key: "description")
     public var description: String
 
-    @Field(key: "locationName")
+    @Field(key: "dualCreditDailySchedule")
+    public var dualCreditDailySchedule: String
+    
+    @Field(key: "location")
     public var location: String
 
-    @Field(key: "isApplication")
-    public var isApplication: Int
-
-    @Field(key: "isAP")
-    public var isAP: Int
-
-    @Field(key: "isIB")
-    public var isIB: Int
-
-    @Field(key: "isPreAP")
-    public var isPreAP: Int
-
-    @Field(key: "isDualCredit")
-    public var isDualCredit: Int
-
-    @Field(key: "isOnLevel")
-    public var isOnLevel: Int
-
-    @Field(key: "semester")
-    public var semester: String
-
-    @Field(key: "availabilityBitmap")
-    public var availabilityBitmap: Int
+    @Field(key: "periodBitmap")
+    public var periodBitmap: Int
 
     
-    // Creates a new, empty Employee.
+    // Creates a new, empty Courses.
     public init() { }
 }
 
