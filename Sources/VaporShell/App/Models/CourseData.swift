@@ -18,7 +18,7 @@ import Fluent
 import FluentMySQLDriver
 
 // This class provides the model for a Course
-final public class CourseData: Model{
+final public class CourseData : Model{
     // Name of the table or collection.
     public static let schema = "Courses"
 

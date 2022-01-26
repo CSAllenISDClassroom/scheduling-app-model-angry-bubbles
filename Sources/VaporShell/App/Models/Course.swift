@@ -32,11 +32,15 @@ final public class Course : Content{
         self.description = courseData.description
         self.semester = try Self.validateSemester(semester: courseData.semester)        
         self.periodBitmap = try Self.availabilityAsPeriod(bitmap: courseData.periodBitmap)
-        self.courseCode = try Self.validateCourseCode(code: courseData.courseCode)
+        self.courseCode = try Self.validateCourseCode(code: courseData.id)
     }
 
     private static func validateCourseCode(code: String?) throws -> String {
-        //        guard code != "NULL"
+        guard code != nil else {
+            throw Abort(.badRequest, reason: "Expected string value for code and not null")
+        }
+
+        return code!
 
     }
     
