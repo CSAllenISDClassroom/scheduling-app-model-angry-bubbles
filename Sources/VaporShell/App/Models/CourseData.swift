@@ -30,7 +30,7 @@ final public class CourseData : Model{
     public var semesterLength: String?
 
     @Field(key: "semester")
-    public var semester: String?
+    public var semester: Int?
 
     // Short Description of the course
     @Field(key: "shortDescription")
