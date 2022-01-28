@@ -22,28 +22,20 @@ import FluentMySQLDriver
 final public class Course : Content{
 
     public var courseCode : String
-    public var description : String
-    private var semester : Int
-    public var periodBitmap : [[Int]]
+    //public var description : String
+    //private var semester : Int
+    //public var periodBitmap : [[Int]]
     
     
     // Initialize course data information
-    init(courseData: CourseData) throws {
-        self.description = courseData.description
-        self.semester = try Self.validateSemester(semester: courseData.semester)        
-        self.periodBitmap = try Self.availabilityAsPeriod(bitmap: courseData.periodBitmap)
-        self.courseCode = try Self.validateCourseCode(code: courseData.id)
+    init(courseData: CourseData) {// throws {
+        //self.description = courseData.description
+        //self.semester = try Self.validateSemester(semester: courseData.semester)        
+        //self.periodBitmap = try Self.availabilityAsPeriod(bitmap: courseData.periodBitmap)
+        self.courseCode = courseData.id!
     }
-
-    private static func validateCourseCode(code: String?) throws -> String {
-        guard code != nil else {
-            throw Abort(.badRequest, reason: "Expected string value for code and not null")
-        }
-
-        return code!
-
-    }
-    
+     
+  /*  
     private static func validateSemester(semester: String) throws -> Int {
         // Drop the initial "S" from semester (S1, S2)
         guard semester.count == 1,
@@ -87,7 +79,7 @@ final public class Course : Content{
 
         return periods
     }
-    
+*/    
 }
 
 

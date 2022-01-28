@@ -27,26 +27,26 @@ final public class CourseData : Model{
     public var id: String?
 
     @Field(key: "semesterLength")
-    public var semesterLength: String
+    public var semesterLength: String?
 
     @Field(key: "semester")
-    public var semester: String
+    public var semester: String?
 
     // Short Description of the course
     @Field(key: "shortDescription")
-    public var shortDescription: String
+    public var shortDescription: String?
 
     @Field(key: "description")
-    public var description: String
+    public var description: String?
 
     @Field(key: "dualCreditDailySchedule")
-    public var dualCreditDailySchedule: String
+    public var dualCreditDailySchedule: String?
     
     @Field(key: "location")
-    public var location: String
+    public var location: String?
 
     @Field(key: "periodBitmap")
-    public var periodBitmap: Int
+    public var periodBitmap: Int?
 
     
     // Creates a new, empty Courses.

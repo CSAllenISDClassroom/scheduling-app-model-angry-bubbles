@@ -26,12 +26,19 @@ func configure(_ app: Application) throws {
     // UNCOMMENT-DATABASE to configure database example
     var tls = TLSConfiguration.makeClientConfiguration()
     tls.certificateVerification = .none
+
+    guard let dbHostname = Environment.get("AHSSchedule_DB_HOSTNAME"),
+          let dbUsername = Environment.get("AHSSchedule_DB_USERNAME"),
+          let dbPassword = Environment.get("AHSSchedule_DB_PASSWORD"),
+          let dbDatabase = Environment.get("AHSSchedule_DB_NAME") else {
+        fatalError("Failed to gain correct credentials from environment")
+    }
     app.databases.use(.mysql(
-                        hostname: "db",
+                        hostname: dbHostname,
                         port: MySQLConfiguration.ianaPortNumber,
-                        username: "AHSSchedule",
-                        password: ",dpf4>/B{v56x6/=",
-                        database: "AHSSchedule",
+                        username: dbUsername,
+                        password: dbPassword,
+                        database: dbDatabase,
                         tlsConfiguration: tls
                       ), as: .mysql)
 
