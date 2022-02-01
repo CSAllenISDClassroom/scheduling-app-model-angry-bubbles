@@ -24,8 +24,10 @@ final public class Course : Content{
     public var courseCode : String
     public var semesterLength : String
     private var semester : Int
-    //public var description : String
+    public var description : String
+    public var location : String
     public var periodBitmap : [[Int]]
+    public var level : String
     
     
     // Initialize course data information
@@ -33,8 +35,10 @@ final public class Course : Content{
         self.courseCode = courseData.id!
         self.semesterLength = try Self.setSemesterLength(semester: courseData.semesterLength)
         self.semester = try Self.validateSemester(semester: courseData.semester)
-        //self.description = courseData.description
+        self.description = try Self.validateDescription(description: courseData.description)
+        self.location = try Self.validateLocation(location: courseData.location)
         self.periodBitmap = try Self.availabilityAsPeriod(bitmap: courseData.periodBitmap)
+        self.level = try Self.validateLevel(level: courseData.level)
     }
 
 
@@ -61,6 +65,26 @@ final public class Course : Content{
         return semesterInteger
     }
     
+    private static func validateDescription(description: String?) throws -> String {
+        guard let descriptionString = description else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+
+        return descriptionString 
+    }
+    
+    private static func validateLocation(location: String?) throws -> String {
+        guard location == "AHS" || location == "CTC" || location == "LFC" || location == "STEAM" else {
+            throw Abort(.badRequest, reason: "Expected AHS, LFC, CTC, or STEAM")
+        }
+
+        guard let locationString = location else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+
+        return locationString 
+    }
+
     
     //returns an array of an array of integer
     //each inner array contains the period(s) that that class is available
@@ -93,6 +117,18 @@ final public class Course : Content{
         }
 
         return periods
+    }
+
+    private static func validateLevel(level: String?) throws -> String {
+        guard level == "On Level" || level == "Advanced" || level == "AP" || level == "Dual Credit" || level == "Honors (Advanced)" || level == "IB" || level == "Gifted/Talented (Advanced)" || level == "Gifted/Honors (Advanced)" || level == "Gifted/AP (AP)" else {
+            throw Abort(.badRequest, reason: "Expected valid level")
+        }
+
+        guard let levelString = level else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+
+        return levelString 
     }
     
 }
