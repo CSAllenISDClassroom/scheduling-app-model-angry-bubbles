@@ -33,9 +33,6 @@ final public class CourseData : Model{
     public var semester: Int?
 
     // Short Description of the course
-    @Field(key: "shortDescription")
-    public var shortDescription: String?
-
     @Field(key: "description")
     public var description: String?
 
@@ -48,7 +45,16 @@ final public class CourseData : Model{
     @Field(key: "periodBitmap")
     public var periodBitmap: Int?
 
-    
+    @Field(key: "level")
+    public var level: String?
+
+    @Field(key: "categories")
+    public var categories: String?
+
+    @Field(key: "subcategories")
+    public var subcategories: String?
+
+
     // Creates a new, empty Courses.
     public init() { }
 }
