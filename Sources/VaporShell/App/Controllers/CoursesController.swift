@@ -19,10 +19,24 @@ public class CoursesController {
     /// 
     public func getCourseByCode(_ app: Application) throws {
         app.get("courses") { req -> Page<Course> in
-            let coursesData = try await CourseData.query(on: req.db)
-              .paginate(for: req)
-            let courses = try coursesData.map{ try Course(courseData : $0) }
-            return courses
+
+            if let semester = try await Course.query(on: req.db)
+                 .filter(\.$semester == semester)
+                 .all()
+            {
+                return semester
+            }
+            
+            else {
+                let coursesData = try await CourseData.query(on: req.db)
+                  .paginate(for: req)
+                let courses = try coursesData.map{ try Course(courseData : $0) }
+                return courses
+            }
+
+  
+
+
         }
         
         app.get("courses", ":code") { req -> Course in
@@ -41,5 +55,6 @@ public class CoursesController {
             
             return course
         }
+
     }
 }
