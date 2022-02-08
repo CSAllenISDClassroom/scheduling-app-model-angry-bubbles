@@ -19,48 +19,22 @@ public class CoursesController {
     ///
     
     public func getCourseByCode(_ app: Application) throws {
-        /*
-        app.get("courses", "filter", ":filterString") { req -> Page<Course> in
-            
-            var arrayFilters = [String]()
-            
-            guard let filterString = req.parameters.get("filterString", as: String.self) else {
-                //TODO: ADD ERROR MESSAGE SPECIFYING THAT FILTERSTRING IS NOT STRING
-                throw Abort(.badRequest)
-            }
 
-// SOON TO BE DEPRECATED CODE BECAUSE FUNCTION WILL BE USED INSTEAD
-            for charIndex in filterString {
-                if filterStringCount[charIndex] == "=" {
-                    
-                }
-            }
+        app.get("courses", "filter", ":filters") { req -> Page<Course> in
 
-            //equal sign number is the equal sign you want to find i.e. if you want to find the third equal sign, put 3
-            func findEqualSignIndex(equalSignNumber: Int, filterString: String) -> Int {
-                var equalSignsFound = 0
-                for charIndex in filterString.count {
-                    if filterString[charIndex] == "=" {
-                        if equalSignsFound == equalSignNumber - 1 {
-                            return charIndex
-                        } 
-                    }
-                }
-            }
+            let filters = req.parameters.get("filters")
+
+            print(filters)
             
-            /*
-            let semester = req.parameters.get("semester")
-            let semesterCourses = try await CourseData.query(on: req.db)
-              .filter(\CourseData.semester == semester)
+            let courseData = try await CourseData.query(on: req.db)
               .paginate(for: req)
             let courses = try courseData.map{ try Course(courseData: $0) }
+
             
-             */
             return courses
+
         }
         
-         */
-
         app.get("courses", ":code") { req -> Course in
 
             guard let code = req.parameters.get("code", as: String.self) else {
