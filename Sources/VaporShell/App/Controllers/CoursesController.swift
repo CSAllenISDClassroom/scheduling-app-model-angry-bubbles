@@ -19,6 +19,7 @@ public class CoursesController {
     ///
     
     public func getCourseByCode(_ app: Application) throws {
+        /*
         app.get("courses", "filter", ":filterString") { req -> Page<Course> in
             
             var arrayFilters = [String]()
@@ -57,6 +58,8 @@ public class CoursesController {
              */
             return courses
         }
+        
+         */
 
         app.get("courses", ":code") { req -> Course in
 
