@@ -18,13 +18,31 @@ public class CoursesController {
     /// Returns: ``Employee``
     /// 
     public func getCourseByCode(_ app: Application) throws {
-        app.get("courses") { req -> Page<Course> in
-            let coursesData = try await CourseData.query(on: req.db)
-              .paginate(for: req)
-            let courses = try coursesData.map{ try Course(courseData : $0) }
+
+
+        app.get("courses", "filter") { req -> Page<Course> in
+
+            let coursesData = CourseData.query(on: req.db)
+
+            var filteredCoursesData = coursesData
+
+            if let semester = try? req.query.get(Int.self, at: "semester") {
+                filteredCoursesData = filteredCoursesData.filter(\.$semester == semester)
+            }
+
+            if let location = try? req.query.get(String.self, at: "location") {
+                filteredCoursesData = filteredCoursesData.filter(\.$location == location)
+            }
+
+            if let level = try? req.query.get(String.self, at: "level") {
+                filteredCoursesData = filteredCoursesData.filter(\.$level == level)
+            }
+
+            let paginatedCoursesData = try await filteredCoursesData.paginate(for: req)
+            let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
             return courses
         }
-        
+
         app.get("courses", ":code") { req -> Course in
 
             guard let code = req.parameters.get("code", as: String.self) else {
@@ -36,10 +54,11 @@ public class CoursesController {
                     .first() else {
                 throw Abort(.notFound)
             }
-            
+
             let course = try Course(courseData: courseData)
-            
+
             return course
         }
+
     }
-}
+}  
