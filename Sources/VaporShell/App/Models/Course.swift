@@ -21,26 +21,48 @@ import FluentMySQLDriver
 /// This class provides the model for an Course
 final public class Course : Content{
 
+    public var dualCreditDailySchedule : String
+    
     public var courseCode : String
     public var semesterLength : String
-    private var semester : Int
-    //public var description : String
+    public var semester : Int
+    public var description : String
+    public var location : String
     public var periodBitmap : [[Int]]
-    
+    public var level : String
+    public var categories : String
+    public var subcategories : String
     
     // Initialize course data information
     init(courseData: CourseData) throws {
+        self.dualCreditDailySchedule = try Self.validateDCSchedule(schedule: courseData.dualCreditDailySchedule )
+        
         self.courseCode = courseData.id!
         self.semesterLength = try Self.setSemesterLength(semester: courseData.semesterLength)
         self.semester = try Self.validateSemester(semester: courseData.semester)
-        //self.description = courseData.description
+        self.description = try Self.validateDescription(description: courseData.description)
+        self.location = try Self.validateLocation(location: courseData.location)
         self.periodBitmap = try Self.availabilityAsPeriod(bitmap: courseData.periodBitmap)
+        self.level = try Self.validateLevel(level: courseData.level)
+        self.categories = try Self.validateCategory(category: courseData.categories)
+        self.subcategories = try Self.validateSubcategory(subcategory: courseData.subcategories)
     }
 
+    private static func validateDCSchedule(schedule: String?) throws -> String {
+        guard schedule == "TR" || schedule == "MWF" || schedule == "MTWRF" else {
+            return "NULL"
+        }
 
+        guard let stringSchedule = schedule else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+        
+        return stringSchedule
+    }
+    
     private static func setSemesterLength(semester: String?) throws -> String {
         guard semester == "Dual semester" || semester == "Single semester" else {
-            throw Abort(.badRequest, reason: "Expected Single or Dual semester")
+            return ""
         }
 
         guard let semesterLengthString = semester else {
@@ -52,15 +74,35 @@ final public class Course : Content{
     
   
     private static func validateSemester(semester: Int?) throws -> Int {
-        // Drop the initial "S" from semester (S1, S2)
-        guard let semesterInteger = semester,
-              (1...2).contains(semesterInteger) else {
-            throw Abort(.badRequest, reason: "Cannot convert to Integer")
+        
+        guard let semesterInteger = semester
+        else { //,(1...2).contains(semesterInteger) else {
+            return -1
         }
         
         return semesterInteger
     }
     
+    private static func validateDescription(description: String?) throws -> String {
+        guard let descriptionString = description else {
+            return "No description provided"
+        }
+        
+        return descriptionString 
+    }
+    
+    private static func validateLocation(location: String?) throws -> String {
+        guard location == "AHS" || location == "CTC" || location == "LFC" || location == "STEAM" else {
+            return "Null"
+        }
+
+        guard let locationString = location else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+
+        return locationString 
+    }
+
     
     //returns an array of an array of integer
     //each inner array contains the period(s) that that class is available
@@ -94,7 +136,43 @@ final public class Course : Content{
 
         return periods
     }
-    
+
+    private static func validateLevel(level: String?) throws -> String {
+        guard level == "On Level" || level == "Advanced" || level == "AP" || level == "Dual Credit" || level == "Honors (Advanced)" || level == "IB" || level == "Gifted/Talented (Advanced)" || level == "Gifted/Honors (Advanced)" || level == "Gifted/AP (AP)" else {
+            return "Null"
+            //throw Abort(.badRequest, reason: "Expected valid level")
+        }
+
+        guard let levelString = level else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+
+        return levelString 
+    }
+
+     private static func validateCategory(category: String?) throws -> String {
+         guard category == "Business & Industry" || category == "Business & Industry,Business & Industry" || category == "Core,Business & Industry" || category == "Arts & Humanities" || category == "Business & Industry,Business & Industry,Business & Industry" || category == "Specialty Electives" || category == "Arts & Humanities,Arts & Humanities" || category == "Public Service" || category == "Public Service,Business & Industry" || category == "Public Service,Core" || category == "Core" || category == "Core,Core" || category == "Specialty Electives,Specialty Electives" || category == "Core,Arts & Humanities" || category == "STEM,Business & Industry" || category == "STEM,STEM" || category == "STEM" else {
+            return "Null"
+        }
+
+        guard let categoryString = category else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+
+        return categoryString  
+     }
+
+     private static func validateSubcategory(subcategory: String?) throws -> String {
+         guard subcategory == "Agriculture, Food & Natural Resources" || subcategory == "Agriculture, Food & Natural Resources,Agriculture, Food & Natural Resources" || subcategory == "Math,Agriculture, Food & Natural Resources" || subcategory == "Band" || subcategory == "Choir" || subcategory == "Orchestra" || subcategory == "Finance" || subcategory == "Marketing" || subcategory == "Finance,Business Management & Administration" || subcategory == "Math,Finance" || subcategory == "Business Management & Administration" || subcategory == "Finance,Business Management & Administration,Marketing" || subcategory == "Journalism" || subcategory == "Specialty Electives" || subcategory == "Theatre" || subcategory == "Fine Arts Theory/History" || subcategory == "Visual Arts" || subcategory == "Theatre,Theatre" || subcategory == "Hospitality & Tourism" || subcategory == "Education & Training" || subcategory == "LOTE" || subcategory == "Health Science,Business Management & Administration" || subcategory == "Health Science" || subcategory == "Health Science,Science" || subcategory == "Science" || subcategory == "LOTE,LOTE" || subcategory == "Arts, Audio/Video Technology & Communication" || subcategory == "English" || subcategory == "Law, Public Safety, Corrections & Security,Science" || subcategory == "Law, Public Safety, Corrections & Security" || subcategory == "Math" || subcategory == "Health & Physical Education" || subcategory == "Athletics,Athletics" || subcategory == "Specialty Electives,Specialty Electives" || subcategory == "Social Studies" || subcategory == "Social Studies,Social Studies Electives" || subcategory == "Architecture & Construction" || subcategory == "Engineering,Information Technology" || subcategory == "Computer Science,Engineering" || subcategory == "Information Technology" || subcategory == "Engineering" else {
+             return "Null"
+         }
+         guard let subcategoryString = subcategory else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
+
+        return subcategoryString  
+     
 }
 
 
+}
