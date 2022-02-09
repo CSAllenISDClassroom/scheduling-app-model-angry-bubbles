@@ -151,7 +151,7 @@ final public class Course : Content{
     }
 
      private static func validateCategory(category: String?) throws -> String {
-         guard category == "Business & Industry" || category == "Business & Industry,Business & Industry" || category == "Core,Business & Industry" || category == "NULL" || category == "Arts & Humanities" || category == "Business & Industry,Business & Industry,Business & Industry" || category == "Specialty Electives" || category == "Arts & Humanities,Arts & Humanities" || category == "Public Service" || category == "Public Service,Business & Industry" || category == "Public Service,Core" || category == "Core" || category == "Core,Core" || category == "Specialty Electives,Specialty Electives" || category == "Core,Arts & Humanities" || category == "STEM,Business & Industry" || category == "STEM,STEM" || category == "STEM" else {
+         guard category == "Business & Industry" || category == "Business & Industry,Business & Industry" || category == "Core,Business & Industry" || category == "Arts & Humanities" || category == "Business & Industry,Business & Industry,Business & Industry" || category == "Specialty Electives" || category == "Arts & Humanities,Arts & Humanities" || category == "Public Service" || category == "Public Service,Business & Industry" || category == "Public Service,Core" || category == "Core" || category == "Core,Core" || category == "Specialty Electives,Specialty Electives" || category == "Core,Arts & Humanities" || category == "STEM,Business & Industry" || category == "STEM,STEM" || category == "STEM" else {
             return "Null"
         }
 
@@ -162,11 +162,17 @@ final public class Course : Content{
         return categoryString  
      }
 
-  /*   private static func validateSubcategory(subcategory: String?) throws -> String {
-         guard subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" || subcategory == "" else {
+     private static func validateSubcategory(subcategory: String?) throws -> String {
+         guard subcategory == "Agriculture, Food & Natural Resources" || subcategory == "Agriculture, Food & Natural Resources,Agriculture, Food & Natural Resources" || subcategory == "Math,Agriculture, Food & Natural Resources" || subcategory == "Band" || subcategory == "Choir" || subcategory == "Orchestra" || subcategory == "Finance" || subcategory == "Marketing" || subcategory == "Finance,Business Management & Administration" || subcategory == "Math,Finance" || subcategory == "Business Management & Administration" || subcategory == "Finance,Business Management & Administration,Marketing" || subcategory == "Journalism" || subcategory == "Specialty Electives" || subcategory == "Theatre" || subcategory == "Fine Arts Theory/History" || subcategory == "Visual Arts" || subcategory == "Theatre,Theatre" || subcategory == "Hospitality & Tourism" || subcategory == "Education & Training" || subcategory == "LOTE" || subcategory == "Health Science,Business Management & Administration" || subcategory == "Health Science" || subcategory == "Health Science,Science" || subcategory == "Science" || subcategory == "LOTE,LOTE" || subcategory == "Arts, Audio/Video Technology & Communication" || subcategory == "English" || subcategory == "Law, Public Safety, Corrections & Security,Science" || subcategory == "Law, Public Safety, Corrections & Security" || subcategory == "Math" || subcategory == "Health & Physical Education" || subcategory == "Athletics,Athletics" || subcategory == "Specialty Electives,Specialty Electives" || subcategory == "Social Studies" || subcategory == "Social Studies,Social Studies Electives" || subcategory == "Architecture & Construction" || subcategory == "Engineering,Information Technology" || subcategory == "Computer Science,Engineering" || subcategory == "Information Technology" || subcategory == "Engineering" else {
+             return "Null"
+         }
+         guard let subcategoryString = subcategory else {
+            throw Abort(.badRequest, reason: "Unable to bang")
+        }
 
-             guard let subcategoryString
+        return subcategoryString  
+     
 }
-*/
+
 
 }
