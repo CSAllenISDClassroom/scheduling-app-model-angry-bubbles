@@ -20,21 +20,30 @@ public class CoursesController {
     
     public func getCourseByCode(_ app: Application) throws {
 
-        app.get("courses", "filter", ":filters") { req -> Page<Course> in
 
-            let filters = req.parameters.get("filters")
+        app.get("courses", "filter") { req -> Page<Course> in
 
-            print(filters)
-            
-            let courseData = try await CourseData.query(on: req.db)
-              .paginate(for: req)
-            let courses = try courseData.map{ try Course(courseData: $0) }
+            let coursesData = CourseData.query(on: req.db)
 
-            
+            var filteredCoursesData = coursesData
+
+            if let semester = try? req.query.get(Int.self, at: "semester") {
+                filteredCoursesData = filteredCoursesData.filter(\.$semester == semester)
+            }
+
+            if let location = try? req.query.get(String.self, at: "location") {
+                filteredCoursesData = filteredCoursesData.filter(\.$location == location)
+            }
+
+            if let level = try? req.query.get(String.self, at: "level") {
+                filteredCoursesData = filteredCoursesData.filter(\.$level == level)
+            }
+
+            let paginatedCoursesData = try await filteredCoursesData.paginate(for: req)
+            let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
             return courses
-
         }
-        
+
         app.get("courses", ":code") { req -> Course in
 
             guard let code = req.parameters.get("code", as: String.self) else {
