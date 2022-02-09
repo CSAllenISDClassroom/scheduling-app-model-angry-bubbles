@@ -107,7 +107,7 @@ final public class Course : Content{
     //returns an array of an array of integer
     //each inner array contains the period(s) that that class is available
     //For example, [[1], [2], [2,3]] indicates a class that is availiale during the first period, second period, and the double blocked vertical 2/3 period
-    private static func availabilityAsPeriod(bitmap: Int?) throws -> [[Int]] {
+    public static func availabilityAsPeriod(bitmap: Int?) throws -> [[Int]] {
 
         guard let bitmapInt = bitmap else {
             throw Abort(.badRequest, reason: "Cannot convert to Integer")
