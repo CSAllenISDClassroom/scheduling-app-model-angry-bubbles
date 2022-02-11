@@ -22,10 +22,6 @@ public class CoursesController {
 
         app.get("courses", "filter") { req -> Page<Course> in
 
-
-
-
-
             let semester = try? req.query.get(Int.self, at: "semester")
             let location = try? req.query.get(String.self, at: "location")
             let level = try? req.query.get(String.self, at: "level")
