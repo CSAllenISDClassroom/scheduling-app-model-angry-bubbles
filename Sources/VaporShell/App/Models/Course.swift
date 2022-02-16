@@ -134,6 +134,16 @@ final public class Course : Content{
             }
         }
 
+        //Handle all horizontal, double-blocked periods (bits 21 ... 23)
+        //These bits map to period pairs eg. 2/5, 3/6, 4/7, etc.
+        for bit in 21 ... 23 {
+            if bitmapInt & (1 << bit) != 0 {
+                let firstPeriod = bit - 21
+                let secondPeriod = firstPeriod + 3
+                periods.append([firstPeriod, secondPeriod])
+            }
+        }  
+        
         return periods
     }
 
