@@ -17,9 +17,27 @@ public class CoursesController {
     ///
     /// Returns: ``Employee``
     ///
+
+    
+    public func periodToBitmap(period: [Int]) -> Int {
+        //var bitmap = 0
+        
+        var periodBit = 0
+        
+        if period.count == 1 { // single blocked
+            periodBit = 1 << period[0]
+        } else if period.count == 2 { // double blocked
+            if period[1] == (period[0] + 1) { // vertical
+                periodBit = 1 << period[0] + 11
+            } else if period[1] == (period[0] + 3) { // horizontal
+                periodBit = 1 << period[0] + 21 - 2
+            }
+        }
+        
+        return periodBit
+    }
     
     public func getCourseByCode(_ app: Application) throws {
-
 
         app.get("courses", "filter") { req -> Page<Course> in
 
@@ -39,6 +57,19 @@ public class CoursesController {
                 filteredCoursesData = filteredCoursesData.filter(\.$level == level)
             }
 
+            if let periodString = try? req.query.get(String.self, at: "period") {
+
+                let periodStringArray = periodString.split(separator: "/")
+                var period = [Int]()
+                if periodStringArray.count == 1 {
+                    period.append(Int(periodStringArray[0])!)
+                } else if periodStringArray.count == 2 {
+                    period.append(Int(periodStringArray[0])!)
+                    period.append(Int(periodStringArray[1])!)
+                } 
+                filteredCoursesData = filteredCoursesData.filter(\.$periodBitmap == self.periodToBitmap(period: period))
+            }
+            
             let paginatedCoursesData = try await filteredCoursesData.paginate(for: req)
             let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
             return courses
