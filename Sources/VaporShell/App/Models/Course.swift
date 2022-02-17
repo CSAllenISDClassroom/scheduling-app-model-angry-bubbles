@@ -50,7 +50,7 @@ final public class Course : Content{
 
     private static func validateDCSchedule(schedule: String?) throws -> String {
         guard schedule == "TR" || schedule == "MWF" || schedule == "MTWRF" else {
-            return "NULL"
+            return ""
         }
 
         guard let stringSchedule = schedule else {
@@ -77,7 +77,7 @@ final public class Course : Content{
         
         guard let semesterInteger = semester
         else { //,(1...2).contains(semesterInteger) else {
-            return -1
+            return 0
         }
         
         return semesterInteger
@@ -93,7 +93,7 @@ final public class Course : Content{
     
     private static func validateLocation(location: String?) throws -> String {
         guard location == "AHS" || location == "CTC" || location == "LFC" || location == "STEAM" else {
-            return "Null"
+            return ""
         }
 
         guard let locationString = location else {
