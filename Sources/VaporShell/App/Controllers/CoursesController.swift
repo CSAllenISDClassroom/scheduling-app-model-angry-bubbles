@@ -76,11 +76,11 @@ public class CoursesController {
         }
 
         app.get("courses", ":code") { req -> Course in
-
+            
             guard let code = req.parameters.get("code", as: String.self) else {
                 throw Abort(.badRequest)
             }
-
+            
             guard let courseData = try await CourseData.query(on: req.db)
                     .filter(\.$id == code)
                     .first() else {
@@ -92,5 +92,39 @@ public class CoursesController {
             return course
         }
 
+        //EXCEPTIONS
+        /*
+        app.get("exceptions", "noPeriods") { req -> Page<Course> in
+           
+            guard let courseData = try await CourseData.query(on: req.db)
+                    .filter(\.$periodBitmap == [[Int]]()) else {
+                throw Abort(.notFound)
+            }
+            let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
+            return courses
+        }
+        
+         */
+        
+        app.get("exceptions", "noSemesterLength") { req -> Page<Course> in
+           
+            let courseData = try await CourseData.query(on: req.db)
+              .filter(\.$semesterLength == "")
+            
+            let paginatedCoursesData = try await courseData.paginate(for: req)
+            let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
+            return courses
+        }
+
+        app.get("exceptions", "noSubcategories") { req -> Page<Course> in
+           
+            let courseData = try await CourseData.query(on: req.db)
+                    .filter(\.$subcategories == "")
+
+            let paginatedCoursesData = try await courseData.paginate(for: req)
+            let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
+            return courses
+        }
+        
     }
 }
