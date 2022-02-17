@@ -110,7 +110,7 @@ final public class Course : Content{
     public static func availabilityAsPeriod(bitmap: Int?) throws -> [[Int]] {
 
         guard let bitmapInt = bitmap else {
-            throw Abort(.badRequest, reason: "Cannot convert to Integer")
+            return [[]]
         }
 
         var periods = [[Int]]()
@@ -143,6 +143,11 @@ final public class Course : Content{
                 periods.append([firstPeriod, secondPeriod])
             }
         }  
+
+
+        if periods == [[Int]]() {
+            return [[]]
+        }
         
         return periods
     }
