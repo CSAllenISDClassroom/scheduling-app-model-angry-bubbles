@@ -40,4 +40,19 @@ func routes(_ app: Application) throws {
         return courses
     }
 
+    app.get("categories") {
+        req -> Page<Category>  in
+        let categoriesData = try await CategoriesData.query(on: req.db)
+          .paginate(for: req)
+        let categories = try categoriesData.map{ try Category(categoriesData: $0) }
+        return categories
+    }
+
+    app.get("subcategories") {
+        req -> Page<Subcategory>  in
+        let subcategoriesData = try await SubcategoriesData.query(on: req.db)
+          .paginate(for: req)
+        let subcategories = try subcategoriesData.map{ try Subcategory(subcategoriesData: $0) }
+        return subcategories
+    }
 }
