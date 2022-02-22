@@ -44,7 +44,9 @@ public class CoursesController {
             let semester = try? req.query.get(Int.self, at: "semester")
             let location = try? req.query.get(String.self, at: "location")
             let level = try? req.query.get(String.self, at: "level")
-            let periodString = try? req.query.get(String.self, at: "period")
+            //            let periodString = try? req.query.get(String.self, at: "period")
+
+            /*
 
             let periodStringArray = periodString!.split(separator: "/")
             var period = [Int]()
@@ -53,13 +55,15 @@ public class CoursesController {
             } else if periodStringArray.count == 2 {
                 period.append(Int(periodStringArray[0])!)
                 period.append(Int(periodStringArray[1])!)
-            } 
+            }
+            
+             */
             
             let courseData = try await CourseData.query(on: req.db)
               .filter(semester == nil ? \.$id != "" : \.$semester == semester!)
               .filter(location == nil ? \.$id != "" : \.$location == location!)
               .filter(level == nil ? \.$id != "" : \.$level == level!)
-              .filter(periodString == nil ? \.$id != "" : \.$periodBitmap == self.periodToBitmap(period: period))
+              //.filter(periodString == nil ? \.$id != "" : \.$periodBitmap == self.per)
               .paginate(for: req)
             
             let courses = try courseData.map{ try Course(courseData: $0) }
