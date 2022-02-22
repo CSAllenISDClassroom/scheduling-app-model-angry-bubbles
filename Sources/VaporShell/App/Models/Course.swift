@@ -50,7 +50,7 @@ final public class Course : Content{
 
     private static func validateDCSchedule(schedule: String?) throws -> String {
         guard schedule == "TR" || schedule == "MWF" || schedule == "MTWRF" else {
-            return "NULL"
+            return ""
         }
 
         guard let stringSchedule = schedule else {
@@ -77,7 +77,7 @@ final public class Course : Content{
         
         guard let semesterInteger = semester
         else { //,(1...2).contains(semesterInteger) else {
-            return -1
+            return 0
         }
         
         return semesterInteger
@@ -93,7 +93,7 @@ final public class Course : Content{
     
     private static func validateLocation(location: String?) throws -> String {
         guard location == "AHS" || location == "CTC" || location == "LFC" || location == "STEAM" else {
-            return "Null"
+            return ""
         }
 
         guard let locationString = location else {
@@ -107,10 +107,10 @@ final public class Course : Content{
     //returns an array of an array of integer
     //each inner array contains the period(s) that that class is available
     //For example, [[1], [2], [2,3]] indicates a class that is availiale during the first period, second period, and the double blocked vertical 2/3 period
-    private static func availabilityAsPeriod(bitmap: Int?) throws -> [[Int]] {
+    public static func availabilityAsPeriod(bitmap: Int?) throws -> [[Int]] {
 
         guard let bitmapInt = bitmap else {
-            throw Abort(.badRequest, reason: "Cannot convert to Integer")
+            return [[]]
         }
 
         var periods = [[Int]]()
@@ -143,6 +143,11 @@ final public class Course : Content{
                 periods.append([firstPeriod, secondPeriod])
             }
         }  
+
+
+        if periods == [[Int]]() {
+            return [[]]
+        }
         
         return periods
     }

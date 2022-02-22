@@ -41,37 +41,28 @@ public class CoursesController {
 
         app.get("courses", "filter") { req -> Page<Course> in
 
-            let coursesData = CourseData.query(on: req.db)
+            let semester = try? req.query.get(Int.self, at: "semester")
+            let location = try? req.query.get(String.self, at: "location")
+            let level = try? req.query.get(String.self, at: "level")
+            let periodString = try? req.query.get(String.self, at: "period")
 
-            var filteredCoursesData = coursesData
-
-            if let semester = try? req.query.get(Int.self, at: "semester") {
-                filteredCoursesData = filteredCoursesData.filter(\.$semester == semester)
-            }
-
-            if let location = try? req.query.get(String.self, at: "location") {
-                filteredCoursesData = filteredCoursesData.filter(\.$location == location)
-            }
-
-            if let level = try? req.query.get(String.self, at: "level") {
-                filteredCoursesData = filteredCoursesData.filter(\.$level == level)
-            }
-
-            if let periodString = try? req.query.get(String.self, at: "period") {
-
-                let periodStringArray = periodString.split(separator: "/")
-                var period = [Int]()
-                if periodStringArray.count == 1 {
-                    period.append(Int(periodStringArray[0])!)
-                } else if periodStringArray.count == 2 {
-                    period.append(Int(periodStringArray[0])!)
-                    period.append(Int(periodStringArray[1])!)
-                } 
-                filteredCoursesData = filteredCoursesData.filter(\.$periodBitmap == self.periodToBitmap(period: period))
-            }
+            let periodStringArray = periodString!.split(separator: "/")
+            var period = [Int]()
+            if periodStringArray.count == 1 {
+                period.append(Int(periodStringArray[0])!)
+            } else if periodStringArray.count == 2 {
+                period.append(Int(periodStringArray[0])!)
+                period.append(Int(periodStringArray[1])!)
+            } 
             
-            let paginatedCoursesData = try await filteredCoursesData.paginate(for: req)
-            let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
+            let courseData = try await CourseData.query(on: req.db)
+              .filter(semester == nil ? \.$id != "" : \.$semester == semester!)
+              .filter(location == nil ? \.$id != "" : \.$location == location!)
+              .filter(level == nil ? \.$id != "" : \.$level == level!)
+              .filter(periodString == nil ? \.$id != "" : \.$periodBitmap == self.periodToBitmap(period: period))
+              .paginate(for: req)
+            
+            let courses = try courseData.map{ try Course(courseData: $0) }
             return courses
         }
 
@@ -86,28 +77,28 @@ public class CoursesController {
                     .first() else {
                 throw Abort(.notFound)
             }
-            
+
             let course = try Course(courseData: courseData)
-            
+
             return course
         }
 
         //EXCEPTIONS
         /*
-        app.get("exceptions", "noPeriods") { req -> Page<Course> in
-           
-            guard let courseData = try await CourseData.query(on: req.db)
-                    .filter(\.$periodBitmap == [[Int]]()) else {
-                throw Abort(.notFound)
-            }
-            let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
-            return courses
-        }
-        
+         app.get("exceptions", "noPeriods") { req -> Page<Course> in
+         
+         guard let courseData = try await CourseData.query(on: req.db)
+         .filter(\.$periodBitmap == [[Int]]()) else {
+         throw Abort(.notFound)
+         }
+         let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
+         return courses
+         }
+         
          */
         
         app.get("exceptions", "noSemesterLength") { req -> Page<Course> in
-           
+            
             let courseData = try await CourseData.query(on: req.db)
               .filter(\.$semesterLength == "")
             
@@ -117,14 +108,14 @@ public class CoursesController {
         }
 
         app.get("exceptions", "noSubcategories") { req -> Page<Course> in
-           
+            
             let courseData = try await CourseData.query(on: req.db)
-                    .filter(\.$subcategories == "")
+              .filter(\.$subcategories == "")
 
             let paginatedCoursesData = try await courseData.paginate(for: req)
             let courses = try paginatedCoursesData.map{ try Course(courseData: $0) }
             return courses
         }
-        
     }
 }
+
